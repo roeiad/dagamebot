@@ -1,6 +1,5 @@
 const fs = require("fs")
-const liq = "./faces"
-const path = "C:/Users/USER/WebstormProjects/dagamebot/faces/"
+const path = "./faces"
 
 class liquid {
     static randomIntFromInterval(max) {
@@ -14,11 +13,11 @@ class liquid {
     }
 
     static getFace() {
-        let files = fs.readdirSync(liq);
+        let files = fs.readdirSync(path);
         let amount = files.length
         let random = this.randomIntFromInterval(amount)
         let face = files[random];
-        return liq + "/" + face
+        return path + "/" + face
     }
 }
 
