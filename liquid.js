@@ -17,7 +17,7 @@ class liquid {
     static getFace() {
         let files = fs.readdirSync(liq);
         let amount = files.length
-        let random = this.getRandomArbitrary(amount)
+        let random = this.randomIntFromInterval(amount)
         let face = files[random];
         return face
         // return path + face
