@@ -1,5 +1,4 @@
 const fs = require("fs")
-const d3 = require("d3-random")
 const liq = "./faces"
 const path = "C:/Users/USER/WebstormProjects/dagamebot/faces/"
 
@@ -19,7 +18,7 @@ class liquid {
         let amount = files.length
         let random = this.randomIntFromInterval(amount)
         let face = files[random];
-         return path + face
+         return liq + face
     }
 }
 
