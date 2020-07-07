@@ -32,8 +32,8 @@ client.on("message", async message => {
 
 
     if (command === "liquid") {
-        let file= liqufy.getFace()
-        await message.channel.send({files: [file]});
+        let file = liqufy.getFace()
+        await message.channel.send({files: [{attachment: file, name: "test"}]});
     }
     //
     // if (command === "kick") {
