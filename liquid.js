@@ -4,9 +4,12 @@ const liq = "./faces"
 const path = "C:/Users/USER/WebstormProjects/dagamebot/faces/"
 
 class liquid {
-    async   getFace() {
-        let files = fs.readdirSync(liq);
-        let random = await d3.randomUniform(0, files.length)
+    static files() {
+        return fs.readdirSync(liq);
+    }
+    static getFace() {
+        let files = this.files();
+        let random = d3.randomUniform(0, files.length)
         let face = files[random];
         return path + face
 
