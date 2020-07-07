@@ -33,6 +33,7 @@ client.on("message", async message => {
 
     if (command === "liquid") {
         let file = liqufy.getFace()
+        console.log(file)
         await message.channel.send({files: [{attachment: file, name: "test"}]});
     }
     //

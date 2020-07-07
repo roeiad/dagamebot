@@ -7,8 +7,7 @@ class liquid {
     static getFace() {
         let files = fs.readdirSync(liq);
         let random = d3.randomUniform(0, files.length)
-        console.log(files[random])
-        return files[random];
+        return files;
 
     }
 }
