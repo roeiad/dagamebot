@@ -1,14 +1,14 @@
 const fs = require("fs")
 const d3 = require("d3-random")
-const liq="./faces"
+const liq = "./faces"
 const path = "C:/Users/USER/WebstormProjects/dagamebot/faces/"
 
 class liquid {
-    static getFace() {
+    async   getFace() {
         let files = fs.readdirSync(liq);
-        let random = d3.randomUniform(0, files.length)
-        let face= files[random];
-        return path+face
+        let random = await d3.randomUniform(0, files.length)
+        let face = files[random];
+        return path + face
 
     }
 }
