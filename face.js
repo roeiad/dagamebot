@@ -7,8 +7,7 @@ class liquid {
         fs.readdir(liqufy, function (err, files) {
             let amount = files.length;
             let random = d3.randomUniform(0, amount)
-            return liqufy + '/' + files[random];
-
+            return files[random]
         })
     }
 }
