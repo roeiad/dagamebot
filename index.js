@@ -1,7 +1,6 @@
 const Discord = require("discord.js");
-const fs = require("fs")
-const d3 = require("d3-random")
-const liqufy = "./faces"
+
+const liqufy = require("./face")
 
 const client = new Discord.Client();
 
@@ -33,12 +32,8 @@ client.on("message", async message => {
 
 
     if (command === "liquid") {
-        fs.readdirSync(liqufy, (err, files) => {
-            let amount = files.length;
-            random = d3.randomUniform(0, amount)
-            let face = liqufy + '/' + files[random];
+           let face = liqufy.getFace()
             message.channel.send({files: [face]});
-        })
     }
     //
     // if (command === "kick") {
