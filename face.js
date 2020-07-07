@@ -6,7 +6,7 @@ class liquid {
     static getFace() {
         fs.readdir(liqufy, function (err, files) {
             let amount = files.length;
-            random = d3.randomUniform(0, amount)
+            let random = d3.randomUniform(0, amount)
             return liqufy + '/' + files[random];
 
         })
