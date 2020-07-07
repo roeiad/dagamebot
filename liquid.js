@@ -4,15 +4,22 @@ const liq = "./faces"
 const path = "C:/Users/USER/WebstormProjects/dagamebot/faces/"
 
 class liquid {
-    static getRandomArbitrary( max) {
-        return Math.random() * (max - 1) + 1;
+    static randomIntFromInterval(max) {
+        let result = Math.floor(Math.random() * (max - 0 + 1));
+        if (result < 0) {
+            result = 0;
+        } else if (result > max) {
+            result = max;
+        }
+        return result
     }
+
     static getFace() {
-        let files =  fs.readdirSync(liq);
-        let amount=files.length
+        let files = fs.readdirSync(liq);
+        let amount = files.length
         let random = this.getRandomArbitrary(amount)
         let face = files[random];
-        return files
+        return face
         // return path + face
     }
 }
