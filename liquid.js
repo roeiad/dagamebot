@@ -1,6 +1,7 @@
 const fs = require("fs")
 const d3 = require("d3-random")
-const liq = "C:/Users/USER/WebstormProjects/dagamebot/faces"
+const liq="./faces"
+const path = "C:/Users/USER/WebstormProjects/dagamebot/faces"
 
 class liquid {
     static getFace() {
