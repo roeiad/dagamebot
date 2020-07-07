@@ -12,7 +12,8 @@ class liquid {
         let amount=files.length
         let random = this.getRandomArbitrary(amount)
         let face = files[random];
-        return path + face
+        return files
+        // return path + face
     }
 }
 
