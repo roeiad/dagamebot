@@ -18,7 +18,7 @@ class liquid {
         let amount = files.length
         let random = this.randomIntFromInterval(amount)
         let face = files[random];
-         return liq + face
+        return liq + "/" + face
     }
 }
 
