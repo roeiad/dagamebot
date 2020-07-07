@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 
-const liqufy = require("./face")
+const liqufy = require("./liquid.js")
 
 const client = new Discord.Client();
 
@@ -32,8 +32,8 @@ client.on("message", async message => {
 
 
     if (command === "liquid") {
-           let face = liqufy.getFace()
-            message.channel.send({files: [face]});
+        let file= liqufy.getFace()
+        await message.channel.send({files: [file]});
     }
     //
     // if (command === "kick") {
