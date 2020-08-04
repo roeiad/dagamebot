@@ -22,7 +22,7 @@ client.on("message", async message => {
         let file = liqufy.getFace()
         await message.channel.send({files: [file]});
     }
-    if (command === "outro") {
+    if (command === "outtro") {
         await message.channel.send(" if you like what you saw here click like and subscribe share with friend and family Maybe your dog Check out da game's official for the newest information on music and animations Let's Plays and live streams on our channel I'm will of DA games and we just entered a DAbot command");
     }
     if (command === "intro") {
