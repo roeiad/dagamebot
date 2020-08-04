@@ -2,6 +2,7 @@ const Discord = require("discord.js");
 const liqufy = require("./liquid.js")
 const client = new Discord.Client();
 const config = require("./config.json");
+const text = require("./text.json")
 
 client.on("ready", () => {
     console.log(`Bot has started, with ${client.users.cache.size} users, in ${client.channels.cache.size} channels of ${client.guilds.cache.size} guilds.`);
@@ -23,12 +24,14 @@ client.on("message", async message => {
         await message.channel.send({files: [file]});
     }
     if (command === "outtro") {
-        await message.channel.send(" if you like what you saw here click like and subscribe share with friend and family Maybe your dog Check out da game's official for the newest information on music and animations Let's Plays and live streams on our channel I'm will of DA games and we just entered a DAbot command");
+        await message.channel.send(text.outro);
     }
     if (command === "intro") {
-        await message.channel.send("hey buddy  is "+message.author.username+" of DAGames");
+        await message.channel.send("hey buddy  is " + message.author.username + " of DAGames");
     }
-
+    if (command === "help") {
+    await message.author.send(text.help)
+    }
 });
 
 client.login(process.env.token);
