@@ -3,12 +3,23 @@ const liqufy = require("./liquid.js")
 const client = new Discord.Client();
 const config = require("./config.json");
 const text = require("./text.json")
+const logger = require("discordjs-logger");
+
 
 client.on("ready", () => {
     console.log(`Bot has started, with ${client.users.cache.size} users, in ${client.channels.cache.size} channels of ${client.guilds.cache.size} guilds.`);
     client.user.setActivity(`da!help`);
 });
 
+logger.all(client);
+
+client.login("YOUR_DISCORD_APP_TOKEN")
+client.on("debug", function (info) {
+    console.log(`debug -> ${info}`);
+});
+client.on("error", function (error) {
+    console.error(`client's WebSocket encountered a connection error: ${error}`);
+});
 
 client.on("message", async message => {
     if (message.author.bot) return;
@@ -30,7 +41,7 @@ client.on("message", async message => {
         await message.channel.send("hey buddies is " + message.author.username + " of DAGames");
     }
     if (command === "help") {
-    await message.author.send(text.help)
+        await message.author.send(text.help)
     }
 });
 
