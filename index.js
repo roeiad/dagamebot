@@ -11,7 +11,6 @@ client.on("ready", () => {
     client.user.setActivity(`da!help`);
 });
 
-logger.all(client);
 
 client.login("YOUR_DISCORD_APP_TOKEN")
 client.on("debug", function (info) {
