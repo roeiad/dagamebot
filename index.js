@@ -11,13 +11,18 @@ client.on("ready", () => {
     client.user.setActivity(`da!help`);
 });
 
-
-client.login("YOUR_DISCORD_APP_TOKEN")
 client.on("debug", function (info) {
     console.log(`debug -> ${info}`);
 });
+
 client.on("error", function (error) {
     console.error(`client's WebSocket encountered a connection error: ${error}`);
+});
+
+client.on("disconnect", function (event) {
+    console.log(
+        `The WebSocket has closed and will no longer attempt to reconnect`
+    );
 });
 
 client.on("message", async message => {
