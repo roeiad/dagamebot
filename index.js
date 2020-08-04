@@ -6,7 +6,8 @@ const text = require("./text.json")
 
 client.on("ready", () => {
     console.log(`Bot has started, with ${client.users.cache.size} users, in ${client.channels.cache.size} channels of ${client.guilds.cache.size} guilds.`);
-    client.user.setActivity(`da1help\nServing ${client.guilds.cache.size} servers`);
+    client.user.setActivity(`Serving ${client.guilds.cache.size} servers`);
+    client.user.setStatus(`da!help`);
 });
 
 
