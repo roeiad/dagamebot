@@ -27,7 +27,7 @@ client.on("message", async message => {
         await message.channel.send(text.outro);
     }
     if (command === "intro") {
-        await message.channel.send("hey buddy  is " + message.author.username + " of DAGames");
+        await message.channel.send("hey buddies is " + message.author.username + " of DAGames");
     }
     if (command === "help") {
     await message.author.send(text.help)
