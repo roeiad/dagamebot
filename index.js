@@ -8,6 +8,7 @@ const randomized = require("randomatic")
 const shutUp="https://giphy.com/gifs/H7qmfG8LE8j8BLTBFf"
 
 
+
 client.on("ready", () => {
     console.log(`Bot has started, with ${client.users.cache.size} users, in ${client.channels.cache.size} channels of ${client.guilds.cache.size} guilds.`);
     client.user.setActivity(`da!help`);
@@ -41,7 +42,7 @@ client.on("message", async message => {
             let gif = liqufy.facegif()
             await message.channel.send(gif);
         }
-    else if (choose === "p") {
+     if (choose === "p") {
             let file = liqufy.getFace()
             await message.channel.send({files: [file]});
         }
