@@ -14,9 +14,8 @@
     "discord.js-musicbot-addon": "^13.9.1",
     "discordjs-logger": "^1.9.42",
     "fs": "0.0.1-security",
-    "randomatic": "^3.1.1",
-    "youtube-playlist": "^1.0.4",
-    "youtube-info": "^1.3.2",
-    "get-youtube-id": "^1.0.1"
+    "node": "^14.7.0",
+    "node.js": "0.0.1-security",
+    "randomatic": "^3.1.1"
   }
 }

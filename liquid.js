@@ -16,7 +16,7 @@ class liquid {
 
     static getFace() {
         let result
-        let choose = randomized("?",1, {chars: 'gp'})
+        let choose = randomized("a",1, {chars: 'gp'})
         if (choose=== "p") {
             let files = fs.readdirSync(path);
             let amount = files.length
