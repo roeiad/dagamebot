@@ -36,11 +36,11 @@ client.on("message", async message => {
 
     if (command === "liquid") {
         let choose = randomized("a", 1, {chars: 'gp'})
-        if (choose === g) {
+        if (choose === "g") {
             let gif = liqufy.facegif()
             await message.channel.send(gif);
         }
-        if (choose === p) {
+    else if (choose === "p") {
             let file = liqufy.getFace()
             await message.channel.send({files: [file]});
         }
