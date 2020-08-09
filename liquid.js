@@ -15,21 +15,17 @@ class liquid {
     }
 
     static getFace() {
-        let result
-        let choose = randomized("a",1, {chars: 'gp'})
-        if (choose=== "p") {
-            let files = fs.readdirSync(path);
-            let amount = files.length
-            let random = this.randomIntFromInterval(amount)
-            let face = files[random];
-            result= path + "/" + face
-        }
-        else if (choose==="g"){
-            let amount = gifs.links.length
-            let random = this.randomIntFromInterval(amount)
-           result = gifs.links[random];
-        }
-        return result
+        let files = fs.readdirSync(path);
+        let amount = files.length
+        let random = this.randomIntFromInterval(amount)
+        let face = files[random];
+        return path + "/" + face
+    }
+
+    static facegif() {
+        let amount = gifs.links.length
+        let random = this.randomIntFromInterval(amount)
+        return gifs.links[random];
     }
 }
 

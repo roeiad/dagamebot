@@ -4,6 +4,7 @@ const client = new Discord.Client();
 const config = require("./config.json");
 const text = require("./text.json")
 const logger = require("discordjs-logger");
+const randomized =require("randomatic")
 
 
 
@@ -35,9 +36,13 @@ client.on("message", async message => {
     const command = args.shift().toLowerCase();
 
 
-    if (command === "liquid") {
+    if (command === "liquid-p") {
         let file = liqufy.getFace()
         await message.channel.send({files: [file]});
+    }
+    if (command === "liquid-g") {
+        let gif = liqufy.facegif()
+        await message.channel.send(gif);
     }
     if (command === "outtro") {
         await message.channel.send(text.outro);
