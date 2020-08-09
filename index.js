@@ -4,8 +4,7 @@ const client = new Discord.Client();
 const config = require("./config.json");
 const text = require("./text.json")
 const logger = require("discordjs-logger");
-const randomized =require("randomatic")
-
+const randomized = require("randomatic")
 
 
 client.on("ready", () => {
@@ -35,6 +34,18 @@ client.on("message", async message => {
     const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
     const command = args.shift().toLowerCase();
 
+    if (command === "liquid") {
+        switch (randomized("a", 1, {chars: 'gp'})) {
+            case g:
+                let gif = liqufy.facegif()
+                await message.channel.send(gif);
+                break;
+            case p:
+                let file = liqufy.getFace()
+                await message.channel.send({files: [file]});
+                break
+        }
+    }
 
     if (command === "liquid-p") {
         let file = liqufy.getFace()
