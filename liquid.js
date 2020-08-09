@@ -1,6 +1,6 @@
 const fs = require("fs")
 const path = "./faces"
-const gifs = require("gifs.json")
+const gifs = require("./gifs.json")
 const randomized = require("randomatic")
 
 class liquid {
