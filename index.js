@@ -6,6 +6,7 @@ const text = require("./text.json")
 const logger = require("discordjs-logger");
 
 
+
 client.on("ready", () => {
     console.log(`Bot has started, with ${client.users.cache.size} users, in ${client.channels.cache.size} channels of ${client.guilds.cache.size} guilds.`);
     client.user.setActivity(`da!help`);
@@ -47,6 +48,7 @@ client.on("message", async message => {
     if (command === "help") {
         await message.author.send(text.help)
     }
+
 });
 
 client.login(process.env.token);

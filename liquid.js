@@ -1,5 +1,7 @@
 const fs = require("fs")
 const path = "./faces"
+const gifs = require("gifs.json")
+const randomized = require("randomatic")
 
 class liquid {
     static randomIntFromInterval(max) {
@@ -13,11 +15,19 @@ class liquid {
     }
 
     static getFace() {
-        let files = fs.readdirSync(path);
-        let amount = files.length
-        let random = this.randomIntFromInterval(amount)
-        let face = files[random];
-        return path + "/" + face
+        let choose = randomized("?",1, {chars: 'gp'})
+        if (choose=== "p") {
+            let files = fs.readdirSync(path);
+            let amount = files.length
+            let random = this.randomIntFromInterval(amount)
+            let face = files[random];
+            return path + "/" + face
+        }
+        else if (choose==="g"){
+            let amount = gifs.links.length
+            let random = this.randomIntFromInterval(amount)
+            let face = gifs.links[random];
+        }
     }
 }
 
