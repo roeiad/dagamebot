@@ -5,7 +5,7 @@ const config = require("./config.json");
 const text = require("./text.json")
 const logger = require("discordjs-logger");
 const randomized = require("randomatic")
-const shutUp="https://em.wattpad.com/c4e2cfff8b8cc87747a91a4e0f1ca550a6fed899/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f4e697373705f57394b43446c46413d3d2d3535303833313738362e313531653535306538366636613636383433353439343434373236342e676966?s=fit&w=720&h=720"
+const shutUp="https://giphy.com/gifs/H7qmfG8LE8j8BLTBFf"
 
 
 client.on("ready", () => {
