@@ -14,7 +14,6 @@
   "dependencies": {
     "d3-random": "^2.1.0",
     "discord.js": "^12.2.0",
-    "discord.js-musicbot-addon": "^13.9.1",
     "discordjs-logger": "^1.9.42",
     "fs": "0.0.1-security",
     "node": "^14.7.0",
