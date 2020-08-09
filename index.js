@@ -35,15 +35,14 @@ client.on("message", async message => {
     const command = args.shift().toLowerCase();
 
     if (command === "liquid") {
-        switch (randomized("a", 1, {chars: 'gp'})) {
-            case g:
-                let gif = liqufy.facegif()
-                await message.channel.send(gif);
-                break;
-            case p:
-                let file = liqufy.getFace()
-                await message.channel.send({files: [file]});
-                break
+        let choose = randomized("a", 1, {chars: 'gp'})
+        if (choose === g) {
+            let gif = liqufy.facegif()
+            await message.channel.send(gif);
+        }
+        if (choose === p) {
+            let file = liqufy.getFace()
+            await message.channel.send({files: [file]});
         }
     }
 
