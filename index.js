@@ -60,13 +60,10 @@ client.on("message", async message => {
         const embed = new Discord.MessageEmbed()
             .setTitle(atuser + " ," + message.author.username + " want you to shut up!")
             .setColor(0x00AE86)
-            .setDescription(atuser + " ," + message.author.username.bold() + " want you to shut up!")
             .setImage(shutUp)
 
         await message.channel.send({embed});
 
-        // await message.channel.send(atuser+" ,"+message.author.username+" want you to shut up!")
-        // await message.channel.send(shutUp)
     }
 
 
