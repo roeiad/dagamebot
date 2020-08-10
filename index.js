@@ -57,11 +57,11 @@ client.on("message", async message => {
     }
     if (command === "shutup") {
         let atuser = message.mentions.users.first()
-        if (atuser.username === message.author.username) {
-            return await message.channel.send(text.rude)
-        }
         if (atuser === undefined) {
             return await message.channel.send("you want the air to shu up?")
+        }
+        if (atuser.username === message.author.username) {
+            return await message.channel.send(text.rude)
         } else {
             const embed = new Discord.MessageEmbed()
                 .setTitle(atuser.username + " ," + message.author.username + " want you to shut up!")
