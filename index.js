@@ -57,7 +57,7 @@ client.on("message", async message => {
     }
     if (command === "shutup") {
         let atuser = message.mentions.users.first().username
-        const embed = new Discord.RichEmbed()
+        const embed = new Discord.MessageEmbed()
 
             .setColor(0x00AE86)
             .setDescription(atuser + " ," + message.author.username + " want you to shut up!")
