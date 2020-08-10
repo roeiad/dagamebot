@@ -60,21 +60,16 @@ client.on("message", async message => {
         if (args[0]) {
             const user = mention.getUserFromMention(args[0]);
             if (!user) {
-                const exampleEmbed = new Discord.MessageEmbed()
-                    .setDescription((`${user.username}, ${message.author.username} wants you to shut up!`)
-                    )
-                    .setImage(shutUp)
-
-                channel.send(exampleEmbed);
-        //         return message.reply('Please use a proper mention if you want to make someone else\'s to shit up.');
+                return message.reply('Please use a proper mention if you want to see someone else\'s avatar.');
             }
-        //
-        //     return message.channel.send(`${user.username}, ${message.author.username} wants you to shut up!`);
+            const embed = new Discord.RichEmbed()
+                .setDescription(`${user.username}, ${message.author.username} wants you to shut up!`)
+                .setImage(shutUp)
+            return message.channel.send({embed})
         }
-        //
-        // return message.channel.send(`${message.author.username}, your avatar: ${message.author.displayAvatarURL({dynamic: true})}`);
-        // await message.channel.send(shutUp)
     }
+
+
     if (command === "outtro") {
         await message.channel.send(text.outro);
     }
@@ -85,6 +80,7 @@ client.on("message", async message => {
         await message.author.send(text.help)
     }
 
-});
+})
+;
 
 client.login(process.env.token);
