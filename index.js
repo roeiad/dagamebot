@@ -67,10 +67,10 @@ client.on("message", async message => {
 
                 channel.send(exampleEmbed);
         //         return message.reply('Please use a proper mention if you want to make someone else\'s to shit up.');
-        //     }
+            }
         //
         //     return message.channel.send(`${user.username}, ${message.author.username} wants you to shut up!`);
-        // }
+        }
         //
         // return message.channel.send(`${message.author.username}, your avatar: ${message.author.displayAvatarURL({dynamic: true})}`);
         // await message.channel.send(shutUp)
