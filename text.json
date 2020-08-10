@@ -1,4 +1,5 @@
 {
   "outro": " if you like what you saw here click like and subscribe share with friend and family Maybe your dog Check out da game's official for the newest information on music and animations Let's Plays and live streams on our channel I'm will of DA games and we just entered a DAbot command",
-  "help":"`da!liquid` for a random liquefy will  \n `da!intro` for the intro \n `da!outtro` for the outtro "
+  "help":"`prefix `da!` \n liquid-p/-g` for a random liquefy will picture/gif \n `shutup @user` making people shut up \n`intro` for the intro \n `outtro` for the outtro ",
+  "rude": "dont be rude to yourself"
 }
