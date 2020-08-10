@@ -5,7 +5,7 @@ const config = require("./config.json");
 const text = require("./text.json")
 const logger = require("discordjs-logger");
 const randomized = require("randomatic")
-const shutUp = "https://giphy.com/gifs/H7qmfG8LE8j8BLTBFf"
+const shutUp = "https://media3.giphy.com/media/H7qmfG8LE8j8BLTBFf/giphy.gif"
 
 
 client.on("ready", () => {
@@ -58,9 +58,9 @@ client.on("message", async message => {
     if (command === "shutup") {
         let atuser = message.mentions.users.first().username
         const embed = new Discord.MessageEmbed()
-
+            .setTitle("SHUT UP!!!")
             .setColor(0x00AE86)
-            .setDescription(atuser + " ," + message.author.username + " want you to shut up!")
+            .setDescription(atuser.bold() + " ," + message.author.username.bold() + " want you to shut up!")
             .setImage(shutUp)
 
         await message.channel.send({embed});
