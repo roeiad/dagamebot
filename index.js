@@ -57,13 +57,20 @@ client.on("message", async message => {
     }
     if (command === "shutup") {
         let atuser = message.mentions.users.first().username
-        const embed = new Discord.MessageEmbed()
-            .setTitle(atuser + " ," + message.author.username + " want you to shut up!")
-            .setColor(0x00AE86)
-            .setImage(shutUp)
+        if (atuser === message.author.username) {
+            await message.channel.send("dont be so mean to yourself")
+        }
+        if (atuser===undefined){
+            await message.channel.send("you want the air to shu up?")
+        }
+            else {
+            const embed = new Discord.MessageEmbed()
+                .setTitle(atuser + " ," + message.author.username + " want you to shut up!")
+                .setColor(0x00AE86)
+                .setImage(shutUp)
 
-        await message.channel.send({embed});
-
+            await message.channel.send({embed});
+        }
     }
 
 
