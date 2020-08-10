@@ -1,12 +1,12 @@
 const Discord = require("discord.js");
 const liqufy = require("./liquid.js")
+const mention = require("./mention.js")
 const client = new Discord.Client();
 const config = require("./config.json");
 const text = require("./text.json")
 const logger = require("discordjs-logger");
 const randomized = require("randomatic")
-const shutUp="https://giphy.com/gifs/H7qmfG8LE8j8BLTBFf"
-
+const shutUp = "https://giphy.com/gifs/H7qmfG8LE8j8BLTBFf"
 
 
 client.on("ready", () => {
@@ -42,7 +42,7 @@ client.on("message", async message => {
             let gif = liqufy.facegif()
             await message.channel.send(gif);
         }
-     if (choose === "p") {
+        if (choose === "p") {
             let file = liqufy.getFace()
             await message.channel.send({files: [file]});
         }
@@ -56,8 +56,24 @@ client.on("message", async message => {
         let gif = liqufy.facegif()
         await message.channel.send(gif);
     }
-    if (command=== "shut-up"){
-        await message.channel.send(shutUp)
+    if (command === "shutup") {
+        if (args[0]) {
+            const user = mention.getUserFromMention(args[0]);
+            if (!user) {
+                const exampleEmbed = new Discord.MessageEmbed()
+                    .setDescription((`${user.username}, ${message.author.username} wants you to shut up!`)
+                    )
+                    .setImage(shutUp)
+
+                channel.send(exampleEmbed);
+        //         return message.reply('Please use a proper mention if you want to make someone else\'s to shit up.');
+        //     }
+        //
+        //     return message.channel.send(`${user.username}, ${message.author.username} wants you to shut up!`);
+        // }
+        //
+        // return message.channel.send(`${message.author.username}, your avatar: ${message.author.displayAvatarURL({dynamic: true})}`);
+        // await message.channel.send(shutUp)
     }
     if (command === "outtro") {
         await message.channel.send(text.outro);
