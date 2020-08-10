@@ -1,6 +1,5 @@
 const Discord = require("discord.js");
 const liqufy = require("./liquid.js")
-const mention = require("./mention.js")
 const client = new Discord.Client();
 const config = require("./config.json");
 const text = require("./text.json")
@@ -58,7 +57,8 @@ client.on("message", async message => {
     }
     if (command === "shutup") {
         let atuser =message.mentions.users.first().username
-        await message.channel.send(atuser+" ,"+message.author.username+" want you to shut up!"+shutUp)
+        await message.channel.send(atuser+" ,"+message.author.username+" want you to shut up!")
+        await message.channel.send(shutUp)
     }
 
 
