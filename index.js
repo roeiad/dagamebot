@@ -57,16 +57,8 @@ client.on("message", async message => {
         await message.channel.send(gif);
     }
     if (command === "shutup") {
-        if (args[0]) {
-            const user = mention.getUserFromMention(args[0]);
-            if (!user) {
-                return message.reply('Please use a proper mention if you want to see someone else\'s avatar.');
-            }
-            const embed = new Discord.RichEmbed()
-                .setDescription(`${user.username}, ${message.author.username} wants you to shut up!`)
-                .setImage(shutUp)
-            return message.channel.send({embed})
-        }
+        let atuser =message.mentions.users.first().username
+        await message.channel.send(atuser+" ,"+message.author.username+" want you to shut up!"+shutUp)
     }
 
 
