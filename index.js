@@ -3,7 +3,6 @@ const liqufy = require("./liquid.js")
 const client = new Discord.Client();
 const config = require("./config.json");
 const text = require("./text.json")
-const logger = require("discordjs-logger");
 const randomized = require("randomatic")
 const shutUp = "https://media3.giphy.com/media/H7qmfG8LE8j8BLTBFf/giphy.gif"
 
@@ -62,6 +61,9 @@ client.on("message", async message => {
         }
         if (atuser.username === message.author.username) {
             return await message.channel.send(text.rude)
+        }
+        if (atuser.username === client.user.username) {
+            return await message.channel.send("hey!!!!")
         } else {
             const embed = new Discord.MessageEmbed()
                 .setTitle(atuser.username + " ," + message.author.username + " want you to shut up!")
