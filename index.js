@@ -56,9 +56,17 @@ client.on("message", async message => {
         await message.channel.send(gif);
     }
     if (command === "shutup") {
-        let atuser =message.mentions.users.first().username
-        await message.channel.send(atuser+" ,"+message.author.username+" want you to shut up!")
-        await message.channel.send(shutUp)
+        let atuser = message.mentions.users.first().username
+        const embed = new Discord.RichEmbed()
+
+            .setColor(0x00AE86)
+            .setDescription(atuser + " ," + message.author.username + " want you to shut up!")
+            .setImage(shutUp)
+
+        await message.channel.send({embed});
+
+        // await message.channel.send(atuser+" ,"+message.author.username+" want you to shut up!")
+        // await message.channel.send(shutUp)
     }
 
 
