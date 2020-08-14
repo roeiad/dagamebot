@@ -26,9 +26,7 @@ client.on("disconnect", function (event) {
         `The WebSocket has closed and will no longer attempt to reconnect`
     );
 });
-client.fetchUser(173027655719845888).then(myUser => {
-    avatar = myUser.avatarURL;
-});
+
 
 client.on("message", async message => {
     if (message.author.bot) return;
@@ -75,7 +73,7 @@ client.on("message", async message => {
             .setTitle("Help")
             .setColor(0x00AE86)
             .setDescription("prefix:" + text.help.prefix)
-            .setFooter("created and developed by netro", avatar)
+            .setFooter("created and developed by netro", "https://cdn.discordapp.com/avatars/173027655719845888/ffca213645861ebc351aa1b266644722.png")
             .addField("intro", text.help.intro, true)
             .addField("outtro", text.help.outtro, true)
             .addField("liquified", text.help.liquified, true)
