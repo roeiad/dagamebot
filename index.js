@@ -7,9 +7,7 @@ const randomized = require("randomatic")
 const shutUp = "https://media3.giphy.com/media/H7qmfG8LE8j8BLTBFf/giphy.gif"
 let avatar
 
-client.fetchUser(173027655719845888).then(myUser => {
-    avatar = myUser.avatarURL;
-});
+
 client.on("ready", () => {
     console.log(`Bot has started, with ${client.users.cache.size} users, in ${client.channels.cache.size} channels of ${client.guilds.cache.size} guilds.`);
     client.user.setActivity(`da!help`);
@@ -27,6 +25,9 @@ client.on("disconnect", function (event) {
     console.log(
         `The WebSocket has closed and will no longer attempt to reconnect`
     );
+});
+client.fetchUser(173027655719845888).then(myUser => {
+    avatar = myUser.avatarURL;
 });
 
 client.on("message", async message => {
