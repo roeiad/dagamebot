@@ -5,8 +5,11 @@ const config = require("./config.json");
 const text = require("./text.json")
 const randomized = require("randomatic")
 const shutUp = "https://media3.giphy.com/media/H7qmfG8LE8j8BLTBFf/giphy.gif"
+let avatar
 
-
+client.fetchUser(173027655719845888).then(myUser => {
+    avatar = myUser.avatarURL;
+});
 client.on("ready", () => {
     console.log(`Bot has started, with ${client.users.cache.size} users, in ${client.channels.cache.size} channels of ${client.guilds.cache.size} guilds.`);
     client.user.setActivity(`da!help`);
@@ -35,25 +38,10 @@ client.on("message", async message => {
     const command = args.shift().toLowerCase();
 
     if (command === "liquid") {
-        let choose = randomized("a", 1, {chars: 'gp'})
-        if (choose === "g") {
-            let gif = liqufy.facegif()
-            await message.channel.send(gif);
-        }
-        if (choose === "p") {
-            let file = liqufy.getFace()
-            await message.channel.send({files: [file]});
-        }
+        let face = liqufy.getFace()
+        await message.channel.send(face);
     }
 
-    if (command === "liquid-p") {
-        let file = liqufy.getFace()
-        await message.channel.send({files: [file]});
-    }
-    if (command === "liquid-g") {
-        let gif = liqufy.facegif()
-        await message.channel.send(gif);
-    }
     if (command === "shutup") {
         let atuser = message.mentions.users.first()
         if (atuser === undefined) {
@@ -82,7 +70,16 @@ client.on("message", async message => {
         await message.channel.send("hey buddies is " + message.author.username + " of DAGames");
     }
     if (command === "help") {
-        await message.author.send(text.help)
+        const embed = new Discord.MessageEmbed()
+            .setTitle("Help")
+            .setColor(0x00AE86)
+            .setDescription("prefix:" + text.help.prefix)
+            .setFooter("created and developed by netro", avatar)
+            .addField("intro", text.help.intro, true)
+            .addField("outtro", text.help.outtro, true)
+            .addField("liquified", text.help.liquified, true)
+            .addField("shutup @user", text.help.shutup, true)
+        return await message.channel.send({embed});
     }
 
 })

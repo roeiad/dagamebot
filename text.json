@@ -1,5 +1,11 @@
 {
+  "help": {
+    "prefix": "`prefix `da!`",
+    "liquified": " for a random liquefy will picture/gif",
+    "shutup": " making people shut up ",
+    "intro": "for the intro",
+    "outtro": " for the outtro"
+  },
   "outro": " if you like what you saw here click like and subscribe share with friend and family Maybe your dog Check out da game's official for the newest information on music and animations Let's Plays and live streams on our channel I'm will of DA games and we just entered a DAbot command",
-  "help":"`prefix `da!` \n liquid-p/-g` for a random liquefy will picture/gif \n `shutup @user` making people shut up \n`intro` for the intro \n `outtro` for the outtro ",
   "rude": "dont be rude to yourself"
 }
