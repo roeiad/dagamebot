@@ -15,7 +15,7 @@ class liquid {
     }
 
     static getFace() {
-        let choose=randomized("a",1,{chars: 'pg'})
+        let choose=randomized("?",1,{chars: 'pg'})
         if(choose==='g') {
             let amount = faces.gifs.length
             let random = this.randomIntFromInterval(amount)
