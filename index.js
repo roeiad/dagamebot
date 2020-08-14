@@ -36,7 +36,7 @@ client.on("message", async message => {
     const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
     const command = args.shift().toLowerCase();
 
-    if (command === "liquid") {
+    if (command === "liquified") {
         let face = liqufy.getFace()
         await message.channel.send(face);
     }
@@ -74,10 +74,10 @@ client.on("message", async message => {
             .setColor(0x00AE86)
             .setDescription("prefix:" + text.help.prefix)
             .setFooter("created and developed by netro", "https://cdn.discordapp.com/avatars/173027655719845888/ffca213645861ebc351aa1b266644722.png")
-            .addField("intro", text.help.intro, true)
-            .addField("outtro", text.help.outtro, true)
-            .addField("liquified", text.help.liquified, true)
-            .addField("shutup @user", text.help.shutup, true)
+            .addField("intro", text.help.intro, false)
+            .addField("outtro", text.help.outtro, false)
+            .addField("liquified", text.help.liquified, false)
+            .addField("shutup @user", text.help.shutup, false)
         return await message.channel.send({embed});
     }
 

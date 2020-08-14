@@ -21,7 +21,7 @@ class liquid {
             let random = this.randomIntFromInterval(amount)
             return faces.gifs[random];
         }
-        else {
+        else if(choose=== 'p') {
             let amount = faces.pics.length
             let random = this.randomIntFromInterval(amount)
             return faces.pics[random];
