@@ -7,7 +7,7 @@ class liquid {
     static randomIntFromInterval(max) {
         let result = Math.floor(Math.random() * (max - 0 + 1));
         if (result < 0) {
-            result = 0;
+            result = 1;
         } else if (result > max) {
             result = max;
         }
