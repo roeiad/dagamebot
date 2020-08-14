@@ -72,7 +72,7 @@ client.on("message", async message => {
         const embed = new Discord.MessageEmbed()
             .setTitle("Help")
             .setColor(0x00AE86)
-            .setDescription("prefix:" + text.help.prefix)
+            .setDescription("**prefix**:" + text.help.prefix)
             .setFooter("created and developed by netro", "https://cdn.discordapp.com/avatars/173027655719845888/ffca213645861ebc351aa1b266644722.png")
             .addField("intro", text.help.intro, false)
             .addField("outtro", text.help.outtro, false)
