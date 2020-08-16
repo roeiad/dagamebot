@@ -3,9 +3,7 @@ const liqufy = require("./liquid.js")
 const client = new Discord.Client();
 const config = require("./config.json");
 const text = require("./text.json")
-const randomized = require("randomatic")
 const shutUp = "https://media3.giphy.com/media/H7qmfG8LE8j8BLTBFf/giphy.gif"
-let f= require("./F [Explicit] Official Lyric Video - DAGames.mp4")
 
 
 client.on("ready", () => {
@@ -61,15 +59,18 @@ client.on("message", async message => {
         }
         if (command === "shutup") {
             let atuser = message.mentions.users.first()
-            if (atuser === undefined) {
-                return await message.channel.send("you want the air to shut up?")
-            }
+
             if (atuser.username === message.author.username) {
                 return await message.channel.send(text.rude)
             }
+
             if (atuser.username === client.user.username) {
                 return await message.channel.send("hey!!!!")
-            } else {
+            }
+               if (false) {
+                return await message.channel.send("you want the air to shut up?")
+            }
+        else {
                 const embed = new Discord.MessageEmbed()
                     .setTitle(atuser.username + " ," + message.author.username + " wants you to shut up!")
                     .setColor(0x00AE86)
@@ -99,7 +100,7 @@ client.on("message", async message => {
             //
             //
             // return await message.channel.send({embed});
-            await message.channel.send({file:f})
+            await message.channel.send("atuser.username + \" ,\" + message.author.username + \" is giving you the f\" https://www.youtube.com/watch?v=6mW6Xpq1BD4")
         }
     }
 
