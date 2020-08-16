@@ -124,7 +124,6 @@ client.on("message", async message => {
             .setTitle("twitch")
             .setURL("https://www.twitch.tv/dagamesofficial")
             .setColor(0x6441a5)
-            .setDescription("https://www.twitch.tv/dagamesofficial")
             .setThumbnail("https://images-ext-2.discordapp.net/external/6vWrXeRdB1RKYXLdgQ9el75ZAMcrODldV_qthRp6ssc/https/static-cdn.jtvnw.net/jtv_user_pictures/9fd13095-e26d-48e8-9332-f403a688a69e-profile_image-300x300.png")
         return [await message.channel.send({embed: youtube}), await message.channel.send({embed: twitter}), await message.channel.send({embed: twitch})]
     }
