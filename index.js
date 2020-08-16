@@ -110,7 +110,7 @@ client.on("message", async message => {
             .setColor(0x00ACEE)
             .setImage("https://help.twitter.com/content/dam/help-twitter/brand/logo.png")
             .setDescription("https://twitter.com/DAGamesOfficial")
-      return   await message.channel.send({embed1})
+      return await message.channel.send({embed1})
         // const embed2 = new Discord.MessageEmbed()
         //     .setTitle("youtube")
         //     .setColor(0xFF0000)
