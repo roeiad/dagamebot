@@ -110,20 +110,18 @@ client.on("message", async message => {
             .setColor(0x00ACEE)
             .setThumbnail("https://help.twitter.com/content/dam/help-twitter/brand/logo.png")
             .setDescription("https://twitter.com/DAGamesOfficial")
-        await message.channel.send({embed1});
 
         const embed2 = new Discord.MessageEmbed()
             .setTitle("youtube")
             .setColor(0xFF0000)
             .setThumbnail("https://www.freepnglogos.com/uploads/youtube-logo-red-hd-13.png")
             .setDescription("https://www.youtube.com/user/DiamondArmadaOnline")
-         await message.channel.send({embed2});
         const embed3 = new Discord.MessageEmbed()
             .setTitle("twitch")
             .setColor(0x6441a5)
             .setThumbnail("https://www.freepnglogos.com/uploads/twitch-app-logo-png-3.png")
             .setDescription("https://www.twitch.tv/dagamesofficial")
-         await message.channel.send({embed3});
+        return [await message.channel.send({embed1}), await message.channel.send({embed2}), await message.channel.send({embed3})]
     }
     if (command === "help") {
         const embed = new Discord.MessageEmbed()
