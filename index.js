@@ -34,7 +34,7 @@ client.on("message", async message => {
     const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
     const command = args.shift().toLowerCase();
 
-    if (command === "liquified") {
+    if (command === "liquefied") {
         let face = liqufy.getFace()
         await message.channel.send(face);
     }
@@ -68,7 +68,7 @@ client.on("message", async message => {
             }
             if (atuser === undefined) {
                 return await message.channel.send("you want the air to shut up?")
-            }else {
+            } else {
                 const embed = new Discord.MessageEmbed()
                     .setTitle(atuser.username + " ," + message.author.username + " wants you to shut up!")
                     .setColor(0x00AE86)
@@ -89,16 +89,7 @@ client.on("message", async message => {
         if (atuser.username === client.user.username) {
             return await message.channel.send("hey!!!!")
         } else {
-            // const embed = new Discord.MessageEmbed()
-            //     .setTitle(atuser.username + " ," + message.author.username + " is giving you the f")
-            //     .setColor(0x00AE86)
-            //     .setDescription("https://www.youtube.com/watch?v=6mW6Xpq1BD4")
-            //     fil
-            //     .addField("testing","https://www.youtube.com/watch?v=6mW6Xpq1BD4",false)
-            //
-            //
-            // return await message.channel.send({embed});
-            await message.channel.send(atuser.username + "," + message.author.username + " is giving you the f" )
+            await message.channel.send(atuser.username + "," + message.author.username + " is giving you the f")
             await message.channel.send("https://www.youtube.com/watch?v=6mW6Xpq1BD4")
         }
     }
@@ -113,6 +104,27 @@ client.on("message", async message => {
     if (command === "music") {
         await message.channel.send("https://www.youtube.com/playlist?list=PLUurKioYqqsLjkDGjf8vNLgG6ZQpIgyGw");
     }
+    if (command === "info") {
+        const embed1 = new Discord.MessageEmbed()
+            .setTitle("twitter")
+            .setColor(0x00ACEE)
+            .setThumbnail("https://help.twitter.com/content/dam/help-twitter/brand/logo.png")
+            .setDescription("https://twitter.com/DAGamesOfficial")
+        await message.channel.send({embed1});
+
+        const embed2 = new Discord.MessageEmbed()
+            .setTitle("youtube")
+            .setColor(0xFF0000)
+            .setThumbnail("https://www.freepnglogos.com/uploads/youtube-logo-red-hd-13.png")
+            .setDescription("https://www.youtube.com/user/DiamondArmadaOnline")
+         await message.channel.send({embed2});
+        const embed3 = new Discord.MessageEmbed()
+            .setTitle("twitch")
+            .setColor(0x6441a5)
+            .setThumbnail("https://www.freepnglogos.com/uploads/twitch-app-logo-png-3.png")
+            .setDescription("https://www.twitch.tv/dagamesofficial")
+         await message.channel.send({embed3});
+    }
     if (command === "help") {
         const embed = new Discord.MessageEmbed()
             .setTitle("Help")
@@ -121,7 +133,7 @@ client.on("message", async message => {
             .setFooter("created and developed by netro", "https://cdn.discordapp.com/avatars/173027655719845888/ffca213645861ebc351aa1b266644722.png")
             .addField("intro", text.help.intro, false)
             .addField("outtro", text.help.outtro, false)
-            .addField("liquified", text.help.liquified, false)
+            .addField("liquefied", text.help.liquified, false)
             .addField("shutup @user", text.help.shutup, false)
         return await message.channel.send({embed});
     }
