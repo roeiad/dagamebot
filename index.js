@@ -98,7 +98,8 @@ client.on("message", async message => {
             //
             //
             // return await message.channel.send({embed});
-            await message.channel.send("atuser.username + \" ,\" + message.author.username + \" is giving you the f\" https://www.youtube.com/watch?v=6mW6Xpq1BD4")
+            await message.channel.send(atuser.username + "," + message.author.username + " is giving you the f" )
+            await message.channel.send("https://www.youtube.com/watch?v=6mW6Xpq1BD4")
         }
     }
 
