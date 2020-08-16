@@ -92,6 +92,7 @@ client.on("message", async message => {
             const embed = new Discord.MessageEmbed()
                 .setTitle(atuser.username + " ," + message.author.username + " is giving you the f")
                 .setColor(0x00AE86)
+                .setImage("https://www.youtube.com/watch?v=6mW6Xpq1BD4")
                 .addField("testing","https://www.youtube.com/watch?v=6mW6Xpq1BD4",false)
 
             return await message.channel.send({embed});
