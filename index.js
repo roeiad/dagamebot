@@ -111,7 +111,7 @@ client.on("message", async message => {
             .setURL("https://twitter.com/DAGamesOfficial")
             .setColor(0x00ACEE)
             .setThumbnail("https://pbs.twimg.com/profile_images/1269240624504467456/uIigyOP1_200x200.jpg")
-            .setDescription("https://twitter.com/DAGamesOfficial")
+            .setDescription(text.twitter)
         const youtube = new Discord.MessageEmbed()
             .setTitle("youtube")
             .setURL("https://www.youtube.com/user/DiamondArmadaOnline")
