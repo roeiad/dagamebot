@@ -5,7 +5,6 @@ const config = require("./config.json");
 const text = require("./text.json")
 const randomized = require("randomatic")
 const shutUp = "https://media3.giphy.com/media/H7qmfG8LE8j8BLTBFf/giphy.gif"
-let avatar
 
 
 client.on("ready", () => {
@@ -56,6 +55,44 @@ client.on("message", async message => {
                 .setTitle(atuser.username + " ," + message.author.username + " wants you to shut up!")
                 .setColor(0x00AE86)
                 .setImage(shutUp)
+
+            return await message.channel.send({embed});
+        }
+        if (command === "shutup") {
+            let atuser = message.mentions.users.first()
+            if (atuser === undefined) {
+                return await message.channel.send("you want the air to shut up?")
+            }
+            if (atuser.username === message.author.username) {
+                return await message.channel.send(text.rude)
+            }
+            if (atuser.username === client.user.username) {
+                return await message.channel.send("hey!!!!")
+            } else {
+                const embed = new Discord.MessageEmbed()
+                    .setTitle(atuser.username + " ," + message.author.username + " wants you to shut up!")
+                    .setColor(0x00AE86)
+                    .setImage(shutUp)
+
+                return await message.channel.send({embed});
+            }
+        }
+    }
+    if (command === "f") {
+        let atuser = message.mentions.users.first()
+        if (atuser === undefined) {
+            return await message.channel.send("you want the air to fuck off?")
+        }
+        // if (atuser.username === message.author.username) {
+        //     return await message.channel.send(text.rude)
+        // }
+        if (atuser.username === client.user.username) {
+            return await message.channel.send("hey!!!!")
+        } else {
+            const embed = new Discord.MessageEmbed()
+                .setTitle(atuser.username + " ," + message.author.username + " is giving you the f")
+                .setColor(0x00AE86)
+                .addField("testing","https://www.youtube.com/watch?v=6mW6Xpq1BD4",false)
 
             return await message.channel.send({embed});
         }
