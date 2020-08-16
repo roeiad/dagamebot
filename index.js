@@ -68,6 +68,9 @@ client.on("message", async message => {
     if (command === "intro") {
         await message.channel.send("hey buddies is " + message.author.username + " of DAGames");
     }
+    if (command === "music") {
+        await message.channel.send("https://www.youtube.com/playlist?list=PLUurKioYqqsLjkDGjf8vNLgG6ZQpIgyGw");
+    }
     if (command === "help") {
         const embed = new Discord.MessageEmbed()
             .setTitle("Help")
