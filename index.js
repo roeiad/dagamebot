@@ -63,14 +63,12 @@ client.on("message", async message => {
             if (atuser.username === message.author.username) {
                 return await message.channel.send(text.rude)
             }
-
             if (atuser.username === client.user.username) {
                 return await message.channel.send("hey!!!!")
             }
-               if (false) {
+            if (atuser === undefined) {
                 return await message.channel.send("you want the air to shut up?")
-            }
-        else {
+            }else {
                 const embed = new Discord.MessageEmbed()
                     .setTitle(atuser.username + " ," + message.author.username + " wants you to shut up!")
                     .setColor(0x00AE86)
