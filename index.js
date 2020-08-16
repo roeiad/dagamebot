@@ -4,6 +4,7 @@ const client = new Discord.Client();
 const config = require("./config.json");
 const text = require("./text.json")
 const shutUp = "https://media3.giphy.com/media/H7qmfG8LE8j8BLTBFf/giphy.gif"
+const info =require("./getinfo.js")
 
 
 client.on("ready", () => {
@@ -105,15 +106,18 @@ client.on("message", async message => {
         await message.channel.send("https://www.youtube.com/playlist?list=PLUurKioYqqsLjkDGjf8vNLgG6ZQpIgyGw");
     }
     if (command === "info") {
-        const embed1 = new Discord.MessageEmbed()
+        let twitFoll= info.twitterfolowers()
+        const twitter = new Discord.MessageEmbed()
             .setTitle("twitter")
             .setColor(0x00ACEE)
+            .setThumbnail("https://pbs.twimg.com/profile_images/1269240624504467456/uIigyOP1_200x200.jpg")
+            .addFields("followers",twitFoll)
             .setDescription("https://twitter.com/DAGamesOfficial")
-            .setFooter(" ", "https://help.twitter.com/content/dam/help-twitter/brand/logo.png")
-        const embed2 = new Discord.MessageEmbed()
+        const youtube = new Discord.MessageEmbed()
             .setTitle("youtube")
             .setColor(0xFF0000)
-            .setDescription("https://www.youtube.com/user/DiamondArmadaOnline")
+            .setDescription(text.youtube)
+            .setThumbnail("https://yt3.ggpht.com/a/AATXAJzb7yosXzm6PLx21qi2ZIlKy-xLKRO-bcomZWUVrA=s100-c-k-c0xffffffff-no-rj-mo")
             .setFooter(" ", "https://www.freepnglogos.com/uploads/youtube-logo-red-hd-13.png")
 
         const embed3 = new Discord.MessageEmbed()
