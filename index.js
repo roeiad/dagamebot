@@ -4,7 +4,7 @@ const client = new Discord.Client();
 const config = require("./config.json");
 const text = require("./text.json")
 const shutUp = "https://media3.giphy.com/media/H7qmfG8LE8j8BLTBFf/giphy.gif"
-const info =require("./getinfo.js")
+const info = require("./getinfo.js")
 
 
 client.on("ready", () => {
@@ -79,23 +79,6 @@ client.on("message", async message => {
             }
         }
     }
-    if (command === "f") {
-        let atuser = message.mentions.users.first()
-        if (atuser === undefined) {
-            return await message.channel.send("you want the air to fuck off?")
-        }
-        // if (atuser.username === message.author.username) {
-        //     return await message.channel.send(text.rude)
-        // }
-        if (atuser.username === client.user.username) {
-            return await message.channel.send("hey!!!!")
-        } else {
-            await message.channel.send(atuser.username + "," + message.author.username + " is giving you the f")
-            await message.channel.send("https://www.youtube.com/watch?v=6mW6Xpq1BD4")
-        }
-    }
-
-
     if (command === "outtro") {
         await message.channel.send(text.outro);
     }
@@ -106,6 +89,9 @@ client.on("message", async message => {
         await message.channel.send("https://www.youtube.com/playlist?list=PLUurKioYqqsLjkDGjf8vNLgG6ZQpIgyGw");
     }
     if (command === "info") {
+        await message.channel.send(text.info);
+    }
+    if (command === "social") {
         const twitter = new Discord.MessageEmbed()
             .setTitle("twitter")
             .setURL("https://twitter.com/DAGamesOfficial")
@@ -124,7 +110,7 @@ client.on("message", async message => {
             .setTitle("twitch")
             .setURL("https://www.twitch.tv/dagamesofficial")
             .setColor(0x6441a5)
-              .setThumbnail("https://images-ext-2.discordapp.net/external/6vWrXeRdB1RKYXLdgQ9el75ZAMcrODldV_qthRp6ssc/https/static-cdn.jtvnw.net/jtv_user_pictures/9fd13095-e26d-48e8-9332-f403a688a69e-profile_image-300x300.png")
+            .setThumbnail("https://images-ext-2.discordapp.net/external/6vWrXeRdB1RKYXLdgQ9el75ZAMcrODldV_qthRp6ssc/https/static-cdn.jtvnw.net/jtv_user_pictures/9fd13095-e26d-48e8-9332-f403a688a69e-profile_image-300x300.png")
         return [await message.channel.send({embed: youtube}), await message.channel.send({embed: twitter}), await message.channel.send({embed: twitch})]
     }
     if (command === "help") {
@@ -132,11 +118,14 @@ client.on("message", async message => {
             .setTitle("Help")
             .setColor(0x00AE86)
             .setDescription("**prefix**:" + text.help.prefix)
-            .setFooter("created and developed by netro", "https://cdn.discordapp.com/avatars/173027655719845888/ffca213645861ebc351aa1b266644722.png")
-            .addField("intro", text.help.intro, false)
-            .addField("outtro", text.help.outtro, false)
+            .addField("info", "what the fuck is dagames!??!?", false)
+            .addField("social", "where can i found those weirdos?", false)
+            .addField("music","playlist of all the songs",false)
             .addField("liquefied", text.help.liquified, false)
             .addField("shutup @user", text.help.shutup, false)
+            .addField("intro", text.help.intro, false)
+            .addField("outtro", text.help.outtro, false)
+            .setFooter("created and developed by netro", "https://cdn.discordapp.com/avatars/173027655719845888/ffca213645861ebc351aa1b266644722.png")
         return await message.channel.send({embed});
     }
 
