@@ -7,7 +7,8 @@ help command, its extended help is shown.
 */
 const text = require("../text.json")
 const Discord = require("discord.js");
-
+const User = Client.fetchUser("123456789012345678");
+console.log(User); // Some user object.
 exports.run = (client, message)  => {
   // If no specific command is called, show all filtered commands.
     const embed = new Discord.MessageEmbed()
