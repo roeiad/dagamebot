@@ -1,7 +1,5 @@
-const fs = require("fs")
-const path = "./faces"
-const faces = require("./liquid.json")
-const randomized = require("randomatic")
+const faces = require("../assets/liquid.json");
+const randomized = require("randomatic");
 
 class liquid {
     static randomIntFromInterval(max) {
@@ -11,22 +9,22 @@ class liquid {
         } else if (result > max) {
             result = max;
         }
-        return result
+        return result;
     }
 
     static getFace() {
-        let choose = randomized("?", 1, {chars: 'pg'})
+        let choose = randomized("?", 1, {chars: 'pg'});
         if (choose === 'g') {
-            let amount = faces.gifs.length
-            let random = this.randomIntFromInterval(amount)
+            let amount = faces.gifs.length;
+            let random = this.randomIntFromInterval(amount);
             return faces.gifs[random];
         } else if (choose === 'p') {
-            let amount = faces.pics.length
-            let random = this.randomIntFromInterval(amount)
+            let amount = faces.pics.length;
+            let random = this.randomIntFromInterval(amount);
             return faces.pics[random];
         }
     }
 
 }
 
-module.exports = liquid
+module.exports = liquid;

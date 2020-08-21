@@ -1,19 +1,17 @@
-const text= require("../text.json")
-const liqufy = require("../liquid.js")
-
+const liqufy = require("../functions/liquid.js");
 exports.run = async (client, message) => {
 
-  let face = liqufy.getFace()
-  await message.channel.send(face);
-  };
+    const face = liqufy.getFace();
+    await message.channel.send(face);
+};
 
 exports.conf = {
-  enabled: true,
-  guildOnly: false,
-  aliases: [],
-  permLevel: "User"
+    enabled: true,
+    guildOnly: false,
+    aliases: [],
+    permLevel: "User"
 };
 
 exports.help = {
-  name: "liquefied"
+    name: "liquefied"
 };

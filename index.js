@@ -9,7 +9,6 @@ require("./modules/functions.js")(client);
 
 client.commands = new Enmap();
 client.aliases = new Enmap();
-
 client.settings = new Enmap({name: "settings"});
 
 
@@ -33,20 +32,20 @@ const init = async () => {
     });
     client.on("ready", () => {
         console.log(`Bot has started, with ${client.users.cache.size} users, in ${client.channels.cache.size} channels of ${client.guilds.cache.size} guilds.`);
-        client.user.setActivity(`da!help`);
+        client.user.setActivity("da!help");
     });
 
-    client.on("error", function (error) {
+    client.on("error", function(error) {
         console.error(`client's WebSocket encountered a connection error: ${error}`);
     });
 
-    client.on("disconnect", function () {
+    client.on("disconnect", function() {
         console.log(
-            `The WebSocket has closed and will no longer attempt to reconnect`
+            "The WebSocket has closed and will no longer attempt to reconnect"
         );
     });
 
-    client.login(process.env.token);
+    await client.login(process.env.token);
 
 };
 
