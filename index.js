@@ -13,6 +13,12 @@ client.settings = new Enmap({name: "settings"});
 
 
 const init = async () => {
+    client.on("ready", () => {
+        console.log(client.user.username+` has started, with ${client.users.cache.size} users, in ${client.channels.cache.size} channels of ${client.guilds.cache.size} guilds:`);
+        let guilds = client.guilds.cache.map(guild => guild.id);
+        console.log(guilds);
+        client.user.setActivity("da!help");
+    });
 
     const cmdFiles = await readdir("./commands/");
     client.logger.log(`Loading a total of ${cmdFiles.length} commands.`);
@@ -30,10 +36,7 @@ const init = async () => {
         const event = require(`./events/${file}`);
         client.on(eventName, event.bind(null, client));
     });
-    client.on("ready", () => {
-        console.log(client.user.tag+`has started, with ${client.users.cache.size} users, in ${client.channels.cache.size} channels of ${client.guilds.cache.size} guilds.`);
-        client.user.setActivity("da!help");
-    });
+
 
     client.on("error", function(error) {
         console.error(`client's WebSocket encountered a connection error: ${error}`);
