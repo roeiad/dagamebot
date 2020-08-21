@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
   "engines": {
     "node": "12.x"
@@ -19,6 +20,12 @@
     "jquery": "^3.5.1",
     "node": "^14.7.0",
     "node.js": "0.0.1-security",
-    "randomatic": "^3.1.1"
+    "randomatic": "^3.1.1",
+    "better-sqlite3": "^6.0.1",
+    "chalk": "^4.0.0",
+    "enmap": "^5.2.4",
+    "inquirer": "^7.1.0",
+    "moment": "^2.24.0",
+    "moment-duration-format": "^2.3.2"
   }
 }
