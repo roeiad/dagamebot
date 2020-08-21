@@ -58,26 +58,6 @@ client.on("message", async message => {
 
             return await message.channel.send({embed});
         }
-        if (command === "shutup") {
-            let atuser = message.mentions.users.first()
-
-            if (atuser.username === message.author.username) {
-                return await message.channel.send(text.rude)
-            }
-            if (atuser.username === client.user.username) {
-                return await message.channel.send("hey!!!!")
-            }
-            if (atuser === undefined) {
-                return await message.channel.send("you want the air to shut up?")
-            } else {
-                const embed = new Discord.MessageEmbed()
-                    .setTitle(atuser.username + " ," + message.author.username + " wants you to shut up!")
-                    .setColor(0x00AE86)
-                    .setImage(shutUp)
-
-                return await message.channel.send({embed});
-            }
-        }
     }
     if (command === "outtro") {
         await message.channel.send(text.outro);
@@ -118,9 +98,9 @@ client.on("message", async message => {
             .setTitle("Help")
             .setColor(0x00AE86)
             .setDescription("**prefix**:" + text.help.prefix)
-            .addField("info", "what the fuck is dagames!??!?", false)
-            .addField("social", "where can i found those weirdos?", false)
-            .addField("music","playlist of all the songs",false)
+            .addField("info", text.help.info, false)
+            .addField("social", text.help.social, false)
+            .addField("music",text.help.music,false)
             .addField("liquefied", text.help.liquified, false)
             .addField("shutup @user", text.help.shutup, false)
             .addField("intro", text.help.intro, false)

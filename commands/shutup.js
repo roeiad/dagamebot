@@ -20,4 +20,22 @@ exports.run = async (client, message) => {
 
     return await message.channel.send({embed});
   }};
+exports.conf = {
+  enabled: true,
+  guildOnly: false,
+  aliases: [],
+  permLevel: "User"
+};
 
+exports.help = {
+  name: "liquefied"
+};exports.conf = {
+  enabled: true,
+  guildOnly: false,
+  aliases: [],
+  permLevel: "User"
+};
+
+exports.help = {
+  name: "shutup"
+};

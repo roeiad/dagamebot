@@ -59,12 +59,7 @@ const init = async () => {
         client.on(eventName, event.bind(null, client));
     });
 
-    // Generate a cache of client permissions for pretty perm names in commands.
-    client.levelCache = {};
-    for (let i = 0; i < client.config.permLevels.length; i++) {
-        const thisLevel = client.config.permLevels[i];
-        client.levelCache[thisLevel.name] = thisLevel.level;
-    }
+
 
     // Here we login the client.
     client.login(process.env.token);

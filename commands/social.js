@@ -22,3 +22,13 @@ exports.run = async (client, message) => {
     return [await message.channel.send({embed: youtube}), await message.channel.send({embed: twitter}), await message.channel.send({embed: twitch})]
 };
 
+exports.conf = {
+    enabled: true,
+    guildOnly: false,
+    aliases: [],
+    permLevel: "User"
+};
+
+exports.help = {
+    name: "social"
+};

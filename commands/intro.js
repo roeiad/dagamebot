@@ -4,3 +4,13 @@ exports.run = async (client, message) => {
 };
 
 
+exports.conf = {
+  enabled: true,
+  guildOnly: false,
+  aliases: [],
+  permLevel: "User"
+};
+
+exports.help = {
+  name: "intro"
+};
