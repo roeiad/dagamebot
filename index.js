@@ -31,7 +31,7 @@ const init = async () => {
         client.on(eventName, event.bind(null, client));
     });
     client.on("ready", () => {
-        console.log(`Bot has started, with ${client.users.cache.size} users, in ${client.channels.cache.size} channels of ${client.guilds.cache.size} guilds.`);
+        console.log(client.user.tag+`has started, with ${client.users.cache.size} users, in ${client.channels.cache.size} channels of ${client.guilds.cache.size} guilds.`);
         client.user.setActivity("da!help");
     });
 
