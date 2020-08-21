@@ -9,21 +9,21 @@ module.exports = (client) => {
   command including the VERY DANGEROUS `eval` and `exec` commands!
 
   */
-  client.permlevel = message => {
-    let permlvl = 0;
-
-    const permOrder = client.config.permLevels.slice(0).sort((p, c) => p.level < c.level ? 1 : -1);
-
-    while (permOrder.length) {
-      const currentLevel = permOrder.shift();
-      if (message.guild && currentLevel.guildOnly) continue;
-      if (currentLevel.check(message)) {
-        permlvl = currentLevel.level;
-        break;
-      }
-    }
-    return permlvl;
-  };
+  // client.permlevel = message => {
+  //   let permlvl = 0;
+  //
+  //   const permOrder = client.config.permLevels.slice(0).sort((p, c) => p.level < c.level ? 1 : -1);
+  //
+  //   while (permOrder.length) {
+  //     const currentLevel = permOrder.shift();
+  //     if (message.guild && currentLevel.guildOnly) continue;
+  //     if (currentLevel.check(message)) {
+  //       permlvl = currentLevel.level;
+  //       break;
+  //     }
+  //   }
+  //   return permlvl;
+  // };
 
   /*
   GUILD SETTINGS FUNCTION
@@ -39,10 +39,10 @@ module.exports = (client) => {
   // So if you do that, you're resetting your defaults. Congrats.
   const defaultSettings = {
     "prefix": "da!",
-    // "modLogChannel": "mod-log",
-    // "modRole": "Moderator",
-    // "adminRole": "Administrator",
-    // "systemNotice": "true",
+    "modLogChannel": "mod-log",
+    "modRole": "Moderator",
+    "adminRole": "Administrator",
+    "systemNotice": "true",
     "welcomeChannel": "welcome",
     "welcomeMessage": "Say hello to {{user}}, everyone! We all need a warm welcome sometimes :D",
     "welcomeEnabled": "false"
