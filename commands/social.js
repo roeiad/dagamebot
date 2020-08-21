@@ -1,4 +1,6 @@
 const text = require("../text.json")
+const Discord = require("discord.js");
+
 exports.run = async (client, message) => {
     const twitter = new Discord.MessageEmbed()
         .setTitle("twitter")

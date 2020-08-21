@@ -6,6 +6,8 @@ a command, it is not shown to them. If a command name is given with the
 help command, its extended help is shown.
 */
 const text = require("../text.json")
+const Discord = require("discord.js");
+
 exports.run = (client, message)  => {
   // If no specific command is called, show all filtered commands.
     const embed = new Discord.MessageEmbed()

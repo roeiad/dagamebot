@@ -1,5 +1,6 @@
 const text= require("../text.json")
 const shutUp = "https://media3.giphy.com/media/H7qmfG8LE8j8BLTBFf/giphy.gif"
+const Discord = require("discord.js");
 
 exports.run = async (client, message) => {
 
