@@ -22,5 +22,15 @@ exports.run = (client, message)  => {
         .setFooter("created and developed by netro", "https://cdn.discordapp.com/avatars/173027655719845888/ffca213645861ebc351aa1b266644722.png")
     return  message.channel.send({embed});
 };
+exports.conf = {
+    enabled: true,
+    guildOnly: false,
+    aliases: [],
+    permLevel: "User"
+};
+
+exports.help = {
+    name: "help"
+};
 
 
