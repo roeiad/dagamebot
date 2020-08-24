@@ -5,7 +5,8 @@ command is also filtered by level, so if a user does not have access to
 a command, it is not shown to them. If a command name is given with the
 help command, its extended help is shown.
 */
-
+const Discord = require("discord.js");
+let embedes
 exports.run = (client, message, args) => {
     // If no specific command is called, show all filtered commands.
     if (!args[0]) {
@@ -26,18 +27,22 @@ exports.run = (client, message, args) => {
                 output += `\u200b\n== ${cat} ==\n`;
                 currentCategory = cat;
             }
-            output += `${message.settings.prefix}${c.help.name}${" ".repeat(longest - c.help.name.length)} :: ${c.help.description}\n`;
+             embedes = new Discord.MessageEmbed()
+                .setTitle(output)
+                .addField(`= ${message.settings.prefix}${c.help.name}`  ,`${c.help.description}\n`);
+       return embedes;
         });
-        message.channel.send(output, {code: "asciidoc", split: { char: "\u200b" }});
+        message.channel.send({embed:embedes});
     } else {
         // Show individual command's help.
         let command = args[0];
         if (client.commands.has(command)) {
             command = client.commands.get(command);
-            message.channel.send(`= ${command.help.name} = \n${command.help.description}\nusage:: ${command.help.usage}\naliases:: ${command.conf.aliases.join(", ")}\n= ${command.help.name} =`, {code:"asciidoc"});
+            message.channel.send(`= ${command.help.name} = \n${command.help.description}=\n= ${command.help.name} =`, {code:"asciidoc"});
         }
     }
 };
+
 
 exports.conf = {
     enabled: true,
