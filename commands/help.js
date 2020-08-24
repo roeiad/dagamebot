@@ -1,5 +1,5 @@
 const Discord = require("discord.js");
-const {embedes,embcommand} = new Discord.MessageEmbed()
+const embedes = new Discord.MessageEmbed()
     .setColor(0x00AE86);
 exports.run = (client, message, args) => {
     if (!args[0]) {
@@ -14,24 +14,23 @@ exports.run = (client, message, args) => {
         sorted.forEach(c => {
             const cat = c.help.category.toProperCase();
             if (currentCategory !== cat) {
-                embedes.addField('**' + cat + '**'," ");
+                embedes.addField('**'+cat +'**'," ");
                 currentCategory = cat;
             }
-
+            embedes.setTitle("help");
+            embedes.setDescription(output);
             embedes.addField(`${message.settings.prefix}${c.help.name}`, `${c.help.description}\n`, false);
         });
-        embedes.setTitle("help");
-        embedes.setDescription(output);
         message.channel.send({embed: embedes});
     } else {
         // Show individual command's help.
         let command = args[0];
         if (client.commands.has(command)) {
             command = client.commands.get(command);
-            embcommand.setTitle(`${command.help.name}`);
-            embcommand.setDescription(`${command.help.description}`);
-            message.channel.send({embed:embcommand});
+            embedes.setTitle(`${command.help.name}`);
+            embedes.setDescription(`${command.help.description}`);
         }
+        message.channel.send({embed:embedes});
     }
 };
 
