@@ -11,5 +11,8 @@ exports.conf = {
 };
 
 exports.help = {
-  name: "info"
+  name: "info",
+  category: "all",
+  description: text.help.info
+
 };

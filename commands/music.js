@@ -1,3 +1,4 @@
+const text = require("../assets/text.json");
 exports.run = async (client, message) => {
   await message.channel.send("https://www.youtube.com/playlist?list=PLUurKioYqqsLjkDGjf8vNLgG6ZQpIgyGw");
 };
@@ -10,6 +11,8 @@ exports.conf = {
 };
 
 exports.help = {
-  name: "music"
+  name: "music",
+  category: "all",
+  description: text.help.music
 };
 

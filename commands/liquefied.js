@@ -1,4 +1,5 @@
 const liqufy = require("../functions/liquid.js");
+const text = require("../assets/text.json");
 exports.run = async (client, message) => {
 
     const face = liqufy.getFace();
@@ -13,5 +14,7 @@ exports.conf = {
 };
 
 exports.help = {
-    name: "liquefied"
+    name: "liquefied",
+    category: "all",
+    description: text.help.liquified
 };

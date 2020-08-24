@@ -1,3 +1,5 @@
+const text= require("../assets/text.json");
+
 exports.run = async (client, message) => {
   await message.channel.send("hey buddies is " + message.author.username + " of DAGames");
 };
@@ -10,5 +12,7 @@ exports.conf = {
 };
 
 exports.help = {
-  name: "intro"
+  name: "intro",
+  category: "all",
+  description: text.help.intro
 };

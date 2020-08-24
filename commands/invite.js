@@ -11,5 +11,7 @@ exports.conf = {
 };
 
 exports.help = {
-    name: "invite"
+    name: "invite",
+    category: "all",
+    description: text.help.invite
 };

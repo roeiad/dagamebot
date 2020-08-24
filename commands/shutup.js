@@ -31,5 +31,7 @@ exports.conf = {
 };
 
 exports.help = {
-    name: "shutup"
+    name: "shutup",
+    category: "all",
+    description: text.help.shutup
 };

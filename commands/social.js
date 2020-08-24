@@ -32,5 +32,7 @@ exports.conf = {
 };
 
 exports.help = {
-    name: "social"
+    name: "social",
+    category: "all",
+    description: text.help.social
 };
