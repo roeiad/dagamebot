@@ -1,17 +1,19 @@
 const text = require("../assets/text.json");
+const links = require("../assets/links.json");
 exports.run = async (client, message) => {
-    message.author.send(text.invite)
+    message.author.send(links.invite);
 };
 
 exports.conf = {
     enabled: true,
     guildOnly: false,
-    aliases: [],
+    aliases: ["bot"],
     permLevel: "User"
 };
 
 exports.help = {
     name: "invite",
     category: "other",
-    description: text.help.invite
+    SDescription: text.help.short.invite,
+    LDescription: text.help.long.invite
 };

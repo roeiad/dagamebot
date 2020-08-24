@@ -26,12 +26,13 @@ exports.run = async (client, message) => {
 exports.conf = {
     enabled: true,
     guildOnly: false,
-    aliases: [],
+    aliases: ["shut",],
     permLevel: "User"
 };
 
 exports.help = {
     name: "shutup",
     category: "fun",
-    description: text.help.shutup
+    SDescription: text.help.short.shutup,
+    LDescription: text.help.long.shutup
 };

@@ -1,0 +1,7 @@
+{
+  "invite": "https://discord.com/api/oauth2/authorize?client_id=730009870585167933&permissions=0&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth&scope=bot",
+  "twitter": "https://twitter.com/DAGamesOfficial",
+  "youtube": "https://www.youtube.com/user/DiamondArmadaOnline",
+  "twitch": "https://www.twitch.tv/dagamesofficial",
+  "playlist": "https://www.youtube.com/playlist?list=PLUurKioYqqsLjkDGjf8vNLgG6ZQpIgyGw"
+}

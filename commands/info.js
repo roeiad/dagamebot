@@ -13,6 +13,6 @@ exports.conf = {
 exports.help = {
   name: "info",
   category: "info",
-  description: text.help.info
-
+  SDescription: text.help.short.info,
+  LDescription: text.help.long.info
 };

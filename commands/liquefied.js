@@ -9,12 +9,13 @@ exports.run = async (client, message) => {
 exports.conf = {
     enabled: true,
     guildOnly: false,
-    aliases: [],
+    aliases: ["liquid","face"],
     permLevel: "User"
 };
 
 exports.help = {
     name: "liquefied",
     category: "fun",
-    description: text.help.liquified
+    SDescription: text.help.short.liquified,
+    LDescription: text.help.long.liquified
 };

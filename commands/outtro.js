@@ -12,5 +12,5 @@ exports.conf = {
 exports.help = {
   name: "outtro",
   category: "fun",
-  description: text.help.outtro
-};
+  SDescription: text.help.short.outtro,
+  LDescription: text.help.long.outtro};

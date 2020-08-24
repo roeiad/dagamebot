@@ -1,38 +1,39 @@
 const text = require("../assets/text.json");
+const links = require("../assets/links.json");
+const pics = require("../assets/pics.json");
 const Discord = require("discord.js");
 
 exports.run = async (client, message) => {
     const twitter = new Discord.MessageEmbed()
         .setTitle("twitter")
-        .setURL("https://twitter.com/DAGamesOfficial")
+        .setURL(links.twitter)
         .setColor(0x00ACEE)
-        .setThumbnail("https://pbs.twimg.com/profile_images/1269240624504467456/uIigyOP1_200x200.jpg")
+        .setThumbnail(pics.twitter)
         .setDescription(text.twitter);
     const youtube = new Discord.MessageEmbed()
         .setTitle("youtube")
-        .setURL("https://www.youtube.com/user/DiamondArmadaOnline")
+        .setURL(links.youtube)
         .setColor(0xFF0000)
         .setDescription(text.youtube)
-        .setThumbnail("https://yt3.ggpht.com/a/AATXAJzb7yosXzm6PLx21qi2ZIlKy-xLKRO-bcomZWUVrA=s100-c-k-c0xffffffff-no-rj-mo")
-        .setFooter(" ", "https://www.freepnglogos.com/uploads/youtube-logo-red-hd-13.png");
-
+        .setThumbnail(pics.youtube);
     const twitch = new Discord.MessageEmbed()
         .setTitle("twitch")
-        .setURL("https://www.twitch.tv/dagamesofficial")
+        .setURL(links.twitch)
         .setColor(0x6441a5)
-        .setThumbnail("https://images-ext-2.discordapp.net/external/6vWrXeRdB1RKYXLdgQ9el75ZAMcrODldV_qthRp6ssc/https/static-cdn.jtvnw.net/jtv_user_pictures/9fd13095-e26d-48e8-9332-f403a688a69e-profile_image-300x300.png");
+        .setThumbnail(pics.twitch);
     return [await message.channel.send({embed: youtube}), await message.channel.send({embed: twitter}), await message.channel.send({embed: twitch})];
 };
 
 exports.conf = {
     enabled: true,
     guildOnly: false,
-    aliases: [],
+    aliases: ["links"],
     permLevel: "User"
 };
 
 exports.help = {
     name: "social",
     category: "info",
-    description: text.help.social
+    SDescription: text.help.short.social,
+    LDescription: text.help.long.social
 };

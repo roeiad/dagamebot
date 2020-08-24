@@ -18,7 +18,7 @@ exports.run = (client, message, args) => {
             }
             embedes.setTitle("help");
             embedes.setDescription(output);
-            embedes.addField(`${message.settings.prefix}${c.help.name}`, `${c.help.description}\n`, false);
+            embedes.addField(`${message.settings.prefix}${c.help.name}`, `${c.help.SDescription}\n`, false);
         });
         message.channel.send({embed: embedes});
     } else {
@@ -26,7 +26,8 @@ exports.run = (client, message, args) => {
         if (client.commands.has(command)) {
             command = client.commands.get(command);
             embcommand.setTitle(`${command.help.name}`);
-            embcommand.setDescription(`${command.help.description}`);
+            embcommand.setDescription(`${command.help.LDescription}`);
+            embcommand.addField("aliases",`${command.conf.aliases.join(", ")}`);
         }
         message.channel.send({embed: embcommand});
     }
@@ -36,15 +37,15 @@ exports.run = (client, message, args) => {
 exports.conf = {
     enabled: true,
     guildOnly: false,
-    aliases: [],
+    aliases: ["h",],
     permLevel: "User"
 };
 
 exports.help = {
     name: "help",
     category: "info",
-    description: "Displays all the available commands for your permission level."
-
+    SDescription: "Displays all the available commands for your permission level.",
+    LDescription: "Displays all the available commands for your permission level."
 };
 
 

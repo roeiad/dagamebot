@@ -1,4 +1,4 @@
-const faces = require("../assets/liquid.json");
+const faces = require("../assets/pics.json").liquefied;
 const randomized = require("randomatic");
 
 class liquid {
