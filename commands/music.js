@@ -12,7 +12,7 @@ exports.conf = {
 
 exports.help = {
   name: "music",
-  category: "all",
+  category: "info",
   description: text.help.music
 };
 

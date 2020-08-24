@@ -32,6 +32,6 @@ exports.conf = {
 
 exports.help = {
     name: "shutup",
-    category: "all",
+    category: "fun",
     description: text.help.shutup
 };

@@ -11,6 +11,6 @@ exports.conf = {
 
 exports.help = {
   name: "outtro",
-  category: "all",
+  category: "fun",
   description: text.help.outtro
 };

@@ -8,22 +8,6 @@ module.exports = (client) => {
   NEVER GIVE ANYONE BUT OWNER THE LEVEL 10! By default this can run any
   command including the VERY DANGEROUS `eval` and `exec` commands!
 
-  */
-  // client.permlevel = message => {
-  //   let permlvl = 0;
-  //
-  //   const permOrder = client.config.permLevels.slice(0).sort((p, c) => p.level < c.level ? 1 : -1);
-  //
-  //   while (permOrder.length) {
-  //     const currentLevel = permOrder.shift();
-  //     if (message.guild && currentLevel.guildOnly) continue;
-  //     if (currentLevel.check(message)) {
-  //       permlvl = currentLevel.level;
-  //       break;
-  //     }
-  //   }
-  //   return permlvl;
-  // };
 
   /*
   GUILD SETTINGS FUNCTION
@@ -48,8 +32,7 @@ module.exports = (client) => {
     "welcomeEnabled": "false"
   };
 
-  // getSettings merges the client defaults with the guild settings. guild settings in
-  // enmap should only have *unique* overrides that are different from defaults.
+
   client.getSettings = (guild) => {
     client.settings.ensure("default", defaultSettings);
     if(!guild) return client.settings.get("default");

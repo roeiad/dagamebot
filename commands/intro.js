@@ -13,6 +13,6 @@ exports.conf = {
 
 exports.help = {
   name: "intro",
-  category: "all",
+  category: "fun",
   description: text.help.intro
 };

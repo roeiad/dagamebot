@@ -12,6 +12,6 @@ exports.conf = {
 
 exports.help = {
     name: "invite",
-    category: "all",
+    category: "other",
     description: text.help.invite
 };

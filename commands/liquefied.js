@@ -15,6 +15,6 @@ exports.conf = {
 
 exports.help = {
     name: "liquefied",
-    category: "all",
+    category: "fun",
     description: text.help.liquified
 };
