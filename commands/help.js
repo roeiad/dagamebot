@@ -1,6 +1,8 @@
 const Discord = require("discord.js");
 let embedes = new Discord.MessageEmbed()
     .setColor(0x00AE86);
+let embcommand = new Discord.MessageEmbed()
+    .setColor(0x00AE86);
 exports.run = (client, message, args) => {
     if (!args[0]) {
         const myCommands = client.commands;
@@ -19,18 +21,19 @@ exports.run = (client, message, args) => {
             embedes.addField(`${message.settings.prefix}${c.help.name}`, `${c.help.SDescription}\n`, false);
         });
         message.channel.send({embed: embedes});
-        embedes = " "
+        embedes = new Discord.MessageEmbed()
+            .setColor(0x00AE86);
     } else {
         let command = args[0];
         if (client.commands.has(command)) {
             command = client.commands.get(command);
-            const embcommand = new Discord.MessageEmbed()
-                .setColor(0x00AE86)
-                .setTitle(`${command.help.name}`)
-                .setDescription(`${command.help.LDescription}`)
-                .addField("aliases", `${command.conf.aliases.join(", ")}` || 'there are no aliases');
-            message.channel.send({embed: embcommand});
+            embcommand.setTitle(`${command.help.name}`);
+            embcommand.setDescription(`${command.help.LDescription}`);
+            embcommand.addField("aliases", `${command.conf.aliases.join(", ")}` || 'there are no aliases');
         }
+        message.channel.send({embed: embcommand});
+        embcommand = new Discord.MessageEmbed()
+            .setColor(0x00AE86);
     }
 };
 
