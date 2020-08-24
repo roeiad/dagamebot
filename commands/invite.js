@@ -1,6 +1,7 @@
 const text= require("../assets/text.json");
 exports.run = async (client, message) => {
-  await message.author.id.send(text.invite);
+  let user =message.author.id;
+  await user.send(text.invite);
 };
 
 exports.conf = {
