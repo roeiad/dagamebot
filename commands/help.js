@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
-const embedes = new Discord.MessageEmbed()
-    .setColor(0x00AE86)
+const {embedes,embcommand} = new Discord.MessageEmbed()
+    .setColor(0x00AE86);
 exports.run = (client, message, args) => {
     if (!args[0]) {
         const myCommands = client.commands;
@@ -28,9 +28,9 @@ exports.run = (client, message, args) => {
         let command = args[0];
         if (client.commands.has(command)) {
             command = client.commands.get(command);
-            embedes.setTitle(`${command.help.name}`);
-            embedes.setDescription(`${command.help.description}`);
-            message.channel.send(`= ${command.help.name} = \n${command.help.description}=\n= ${command.help.name} =`, {code: "asciidoc"});
+            embcommand.setTitle(`${command.help.name}`);
+            embcommand.setDescription(`${command.help.description}`);
+            message.channel.send({embed:embcommand});
         }
     }
 };
