@@ -14,7 +14,7 @@ exports.run = (client, message, args) => {
         sorted.forEach(c => {
             const cat = c.help.category.toProperCase();
             if (currentCategory !== cat) {
-                embedes.addField('**' + cat + '**',"");
+                embedes.addField('**' + cat + '**'," ");
                 currentCategory = cat;
             }
 
