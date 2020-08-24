@@ -28,7 +28,7 @@ exports.run = (client, message, args) => {
             embcommand.setTitle(`${command.help.name}`);
             embcommand.setDescription(`${command.help.description}`);
         }
-        message.channel.send({embed: embedes});
+        message.channel.send({embed: embcommand});
     }
 };
 
