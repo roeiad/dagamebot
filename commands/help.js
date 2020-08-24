@@ -6,11 +6,11 @@ a command, it is not shown to them. If a command name is given with the
 help command, its extended help is shown.
 */
 
-exports.run = (client, message, args, level) => {
+exports.run = (client, message, args) => {
     // If no specific command is called, show all filtered commands.
     if (!args[0]) {
         // Filter all commands by which are available for the user's level, using the <Collection>.filter() method.
-        const myCommands = message.guild ? client.commands.filter(cmd => client.levelCache[cmd.conf.permLevel] <= level) : client.commands.filter(cmd => client.levelCache[cmd.conf.permLevel] <= level &&  cmd.conf.guildOnly !== true);
+        const myCommands =  client.commands;
 
         // Here we have to get the command names only, and we use that array to get the longest name.
         // This make the help commands "aligned" in the output.
@@ -34,7 +34,6 @@ exports.run = (client, message, args, level) => {
         let command = args[0];
         if (client.commands.has(command)) {
             command = client.commands.get(command);
-            if (level < client.levelCache[command.conf.permLevel]) return;
             message.channel.send(`= ${command.help.name} = \n${command.help.description}\nusage:: ${command.help.usage}\naliases:: ${command.conf.aliases.join(", ")}\n= ${command.help.name} =`, {code:"asciidoc"});
         }
     }
