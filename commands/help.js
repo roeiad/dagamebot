@@ -21,19 +21,20 @@ exports.run = (client, message, args) => {
             embedes.addField(`${message.settings.prefix}${c.help.name}`, `${c.help.SDescription}\n`, false);
         });
         message.channel.send({embed: embedes});
-        embedes = new Discord.MessageEmbed()
-            .setColor(0x00AE86);
+        // embedes = new Discord.MessageEmbed()
+        //     .setColor(0x00AE86);
     } else {
         let command = args[0];
-        if (client.commands.has(command)||client.commands.has(message.settings.prefix+command)) {
+        if (client.commands.has(command)||client.commands.has("da!"+command)) {
             command = client.commands.get(command);
             embcommand.setTitle(`${command.help.name}`);
             embcommand.setDescription(`${command.help.LDescription}`);
-            embcommand.addField("aliases", `${command.conf.aliases.join(", ")}` || 'there are no aliases');
+            embcommand.addField("usage",`${command.help.usage}`);
+            embcommand.addField("aliases", `${command.conf.aliases.join(", ")}` || 'no aliases');
         }
         message.channel.send({embed: embcommand});
-        embcommand = new Discord.MessageEmbed()
-            .setColor(0x00AE86);
+        // embcommand = new Discord.MessageEmbed()
+        //     .setColor(0x00AE86);
     }
 };
 
@@ -48,6 +49,7 @@ exports.conf = {
 exports.help = {
     name: "help",
     category: "info",
+    usage:"da!help",
     SDescription: "Displays all the available commands for your permission level.",
     LDescription: "Displays all the available commands for your permission level."
 };

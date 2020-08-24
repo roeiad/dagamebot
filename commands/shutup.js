@@ -32,6 +32,7 @@ exports.conf = {
 
 exports.help = {
     name: "shutup",
+    usage:"da!shutup @user",
     category: "fun",
     SDescription: text.help.short.shutup,
     LDescription: text.help.long.shutup

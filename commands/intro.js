@@ -14,6 +14,7 @@ exports.conf = {
 exports.help = {
     name: "intro",
     category: "fun",
+    usage:"da!intro",
     SDescription: text.help.short.intro,
     LDescription: text.help.long.intro
 };

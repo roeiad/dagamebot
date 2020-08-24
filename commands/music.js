@@ -13,6 +13,7 @@ exports.conf = {
 
 exports.help = {
     name: "music",
+    usage:"da!music",
     category: "info",
     SDescription: text.help.short.music,
     LDescription: text.help.long.music
