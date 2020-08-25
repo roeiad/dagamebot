@@ -32,11 +32,10 @@ exports.run = (client, message, args) => {
             embcommand.setDescription(`${command.help.LDescription}`);
             embcommand.addField("usage", `${command.help.usage}`);
             embcommand.addField("aliases", `${command.conf.aliases.join(", ")}` || 'no aliases');
-            return message.channel.send({embed: embcommand});
+            return [message.channel.send({embed: embcommand}), embcommand = new Discord.MessageEmbed()
+                .setColor(0x00AE86)];
 
         }
-        embcommand = new Discord.MessageEmbed()
-            .setColor(0x00AE86);
         message.channel.send("this command dose not exist");
 
     }
