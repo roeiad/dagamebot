@@ -25,18 +25,18 @@ exports.run = (client, message, args) => {
             .setColor(0x00AE86);
     } else {
         let command = args[0];
-        if (client.commands.has(command) || client.commands==="da!"+command) {
+        if (client.commands.has(command) || client.commands === "da!" + command) {
             command = client.commands.get(command);
             embcommand.setTitle(`${command.help.name}`);
             embcommand.setDescription(`${command.help.LDescription}`);
             embcommand.addField("usage", `${command.help.usage}`);
             embcommand.addField("aliases", `${command.conf.aliases.join(", ")}` || 'no aliases');
-            message.channel.send({embed: embcommand});
-            embcommand = new Discord.MessageEmbed()
-                .setColor(0x00AE86);
-        } else {
-            message.channel.send("this command dose not exist");
+            return message.channel.send({embed: embcommand});
+
         }
+        embcommand = new Discord.MessageEmbed()
+            .setColor(0x00AE86);
+        message.channel.send("this command dose not exist");
 
     }
 };
