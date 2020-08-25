@@ -25,7 +25,8 @@ exports.run = (client, message, args) => {
             .setColor(0x00AE86);
     } else {
         let command = args[0];
-        if (client.commands.has(command) || client.commands === "da!" + command) {
+        if (client.commands.has(command) || client.commands.has(command.replace(/^da!+/i, '')
+        )) {
             command = client.commands.get(command);
             embcommand.setTitle(`${command.help.name}`);
             embcommand.setDescription(`${command.help.LDescription}`);
