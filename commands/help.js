@@ -1,8 +1,11 @@
 const Discord = require("discord.js");
+const text = require("../assets/text.json");
 let embedes = new Discord.MessageEmbed()
-    .setColor(0x00AE86);
+    .setColor(0x00AE86)
+    .setFooter(text.help.created);
 let embcommand = new Discord.MessageEmbed()
-    .setColor(0x00AE86);
+    .setColor(0x00AE86)
+    .setFooter(text.help.created);
 exports.run = (client, message, args) => {
     if (!args[0]) {
         const myCommands = client.commands;
@@ -22,7 +25,8 @@ exports.run = (client, message, args) => {
         });
         message.channel.send({embed: embedes});
         embedes = new Discord.MessageEmbed()
-            .setColor(0x00AE86);
+            .setColor(0x00AE86)
+            .setFooter(text.help.created);
     } else {
         let command = args[0];
         command = command.replace('da!', '');
@@ -33,7 +37,7 @@ exports.run = (client, message, args) => {
             embcommand.addField("usage", `${command.help.usage}`);
             embcommand.addField("aliases", `${command.conf.aliases.join(", ")}` || 'no aliases');
             return [message.channel.send({embed: embcommand}), embcommand = new Discord.MessageEmbed()
-                .setColor(0x00AE86)];
+                .setColor(0x00AE86).setFooter(text.help.created)];
 
         }
         message.channel.send("this command dose not exist");
@@ -53,8 +57,8 @@ exports.help = {
     name: "help",
     category: "info",
     usage: "da!help",
-    SDescription: "Displays all the available commands for your permission level.",
-    LDescription: "Displays all the available commands for your permission level."
+    SDescription: "Displays all the available commands.",
+    LDescription: "Displays all the available commands."
 };
 
 

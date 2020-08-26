@@ -1,6 +1,7 @@
 {
   "help": {
     "prefix": "da!",
+    "created": "created by netro",
     "short": {
       "liquified": "is his face always like that?",
       "shutup": "force people to shut up",
@@ -9,7 +10,7 @@
       "info": "what the fuck is dagames!??!?",
       "social": "where can i found those weirdos?",
       "music": "pump up the jam",
-      "invite": "i want the bot!!!!!"
+      "invite": "i want the bot!!!!!",
     },
     "long": {
       "liquified": "for a random liquefy will picture/gif",
