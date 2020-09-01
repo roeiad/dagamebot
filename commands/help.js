@@ -57,7 +57,7 @@ exports.help = {
     name: "help",
     category: "info",
     usage: "da!help",
-    description: "Displays all the available commands.",
+    description: "Displays all the available commands."
 };
 
 
