@@ -25,21 +25,19 @@ exports.run = async (client, message) => {
             message.channel.send("describe what this command will do");
         } else {
             description = message.content;
+            const embed = new Discord.MessageEmbed()
+                .setAuthor("by: " + message.author.tag, message.author.avatarURL())
+                .setTitle("SUGGESTION:" + name)
+                .setDescription(description)
+                .setTimestamp();
+
+            await channel.send(embed).then(m => {
+                m.react("✅");
+                m.react("❌");
+            });
         }
     }
-
-    const embed = new Discord.MessageEmbed()
-        .setAuthor("by: " + message.author.tag, message.author.avatarURL())
-        .setTitle("SUGGESTION:" + name)
-        .setDescription(description)
-        .setTimestamp();
-
-    channel.send(embed).then(m => {
-        m.react("✅");
-        m.react("❌");
-    });
-}
-;
+};
 
 
 exports.conf = {
