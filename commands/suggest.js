@@ -9,22 +9,22 @@ exports.run = async (client, message) => {
 
     await message.channel.send("enter the command name");
     if (message.content === "help") {
-        message.channel.send("da!{command name}");
+        await message.channel.send("da!{command name}");
     } else if (message.content === "cancel") {
         return message.channel.send("canceling");
     } else {
-        name = message.content;
-        message.channel.send("enter a description");
+        name = await message.content;
+        await message.channel.send("enter a description");
         if (message.content === "help") {
-            message.channel.send("da!{command name}");
+            await message.channel.send("da!{command name}");
         }
         if (message.content === "cancel") {
             return message.channel.send("cancelling");
         }
         if (message.content === "help") {
-            message.channel.send("describe what this command will do");
+            await message.channel.send("describe what this command will do");
         } else {
-            description = message.content;
+            description = await message.content;
             const embed = new Discord.MessageEmbed()
                 .setAuthor("by: " + message.author.tag, message.author.avatarURL())
                 .setTitle("SUGGESTION:" + name)
