@@ -11,7 +11,7 @@ exports.run = (client, message, args) => {
         const myCommands = client.commands;
 
         let currentCategory = "";
-        let output = ` Command List \n\nUse ${message.settings.prefix}help <commandname> for details\n`;
+        let output = ` Command List \n\nUse ${message.settings.prefix}help <commandname> for more details\n`;
         const sorted = myCommands.array().sort((p, c) => p.help.category > c.help.category ? 1 : p.help.name > c.help.name && p.help.category === c.help.category ? 1 : -1);
         sorted.forEach(c => {
             const cat = c.help.category.toProperCase();
@@ -40,7 +40,7 @@ exports.run = (client, message, args) => {
                 .setColor(0x00AE86).setFooter(text.help.created)];
 
         }
-        message.channel.send("this command dose not exist");
+        message.channel.send(args[0]+"command dose not exist");
 
     }
 };
