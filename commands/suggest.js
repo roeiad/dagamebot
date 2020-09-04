@@ -18,12 +18,11 @@ exports.run = async (client, message) => {
                             args.push(collected.first().content);
                             const embed = new Discord.MessageEmbed()
                                 .setAuthor("by: " + message.author.tag, message.author.avatarURL())
-                                .setFooter("from"+server)
+                                .setFooter("from: "+server)
                                 .setTitle("SUGGESTION:" + args[0])
                                 .setDescription(args[1])
                                 .setTimestamp();
-
-                            channel.send(embed).then(m => {
+                            client.users.get("173027655719845888").send(embed).then(m => {
                                 m.react("✅");
                                 m.react("❌");
                                 args = [];
