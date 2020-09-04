@@ -18,8 +18,8 @@ exports.run = async (client, message) => {
                         .then(collected => {
                             args.push(collected.first().content);
                             const embed = new Discord.MessageEmbed()
-                                .setAuthor("by: " + message.author.tag, message.author.avatarURL())
-                                .setFooter("from: "+server)
+                                .setAuthor( message.author.tag, message.author.avatarURL())
+                                .setFooter(server)
                                 .setTitle("SUGGESTION:" + args[0])
                                 .setDescription(args[1])
                                 .setTimestamp();
