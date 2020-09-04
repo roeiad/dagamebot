@@ -3,7 +3,6 @@ exports.run = async (client, message) => {
     let args = [];
     let netro=client.users.cache.get("173027655719845888");
     let server= `${message.guild.name}`;
-    let channel = message.guild.channels.cache.find((x) => (x.name === "suggestion" || x.name === "suggestions"));
     const filter = m => {
         return m.author.id === message.author.id;
     };
@@ -51,7 +50,7 @@ exports.conf = {
 
 exports.help = {
     name: "suggest",
-    usage: "da!suggest",
+    usage: "suggest",
     SDescription: "Send your Suggestion",
     LDescription: "Send your Suggestion",
     category: "other"

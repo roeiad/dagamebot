@@ -13,7 +13,7 @@ exports.conf = {
 
 exports.help = {
     name: "invite",
-    usage:"da!invite",
+    usage:"invite",
     category: "other",
     SDescription: text.help.short.invite,
     LDescription: text.help.long.invite

@@ -11,7 +11,7 @@ exports.conf = {
 
 exports.help = {
   name: "outtro",
-  usage:"da!outro",
+  usage:"outro",
   category: "fun",
   SDescription: text.help.short.outtro,
   LDescription: text.help.long.outtro};

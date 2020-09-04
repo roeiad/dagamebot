@@ -15,7 +15,7 @@ exports.conf = {
 
 exports.help = {
     name: "liquefied",
-    usage:"da!liquefied",
+    usage:"liquefied",
     category: "fun",
     SDescription: text.help.short.liquified,
     LDescription: text.help.long.liquified

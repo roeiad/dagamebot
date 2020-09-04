@@ -34,7 +34,7 @@ exports.run = (client, message, args) => {
             command = client.commands.get(command);
             embcommand.setTitle(`${command.help.name}`);
             embcommand.setDescription(`${command.help.LDescription}`);
-            embcommand.addField("usage", `${command.help.usage}`);
+            embcommand.addField("usage", `${message.settings.prefix}${command.help.usage}`);
             embcommand.addField("aliases", `${command.conf.aliases.join(", ")}` || 'no aliases');
             return [message.channel.send({embed: embcommand}), embcommand = new Discord.MessageEmbed()
                 .setColor(0x00AE86).setFooter(text.help.created)];

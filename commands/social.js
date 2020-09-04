@@ -33,7 +33,7 @@ exports.conf = {
 
 exports.help = {
     name: "social",
-    usage:"da!social",
+    usage:"social",
     category: "info",
     SDescription: text.help.short.social,
     LDescription: text.help.long.social
