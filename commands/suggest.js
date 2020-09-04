@@ -18,7 +18,7 @@ exports.run = async (client, message) => {
                 message.channel.send(`describe the command`).then(() => {
                     message.channel.awaitMessages(filter,{max: 1, time: 30000, errors: ['time']})
                         .then(collected => {
-                            args.push(collected.first());
+                            args.push(collected.first().content);
                             const embed = new Discord.MessageEmbed()
                                 .setAuthor("by: " + message.author.tag, message.author.avatarURL())
                                 .setTitle("SUGGESTION:" + args[0])
