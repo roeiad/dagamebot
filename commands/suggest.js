@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 exports.run = async (client, message) => {
     let args = [];
-    let server=message.guild.name()
+    let server= `${guild.name}`;
     let channel = message.guild.channels.cache.find((x) => (x.name === "suggestion" || x.name === "suggestions"));
     const filter = m => {
         return m.author.id === message.author.id;
@@ -18,7 +18,7 @@ exports.run = async (client, message) => {
                             args.push(collected.first().content);
                             const embed = new Discord.MessageEmbed()
                                 .setAuthor("by: " + message.author.tag, message.author.avatarURL())
-                                .setFooter("in:"+server)
+                                .setFooter("from"+server)
                                 .setTitle("SUGGESTION:" + args[0])
                                 .setDescription(args[1])
                                 .setTimestamp();
