@@ -21,7 +21,7 @@ exports.run = (client, message, args) => {
             }
             embedes.setTitle("help");
             embedes.setDescription(output);
-            embedes.addField(`${message.settings.prefix}${c.help.name}`, `${c.help.SDescription}\n`||`${c.help.description}\n`, false);
+            embedes.addField(`${message.settings.prefix}${c.help.name}`, `${c.help.SDescription}\n`, false);
         });
         message.channel.send({embed: embedes});
         embedes = new Discord.MessageEmbed()
@@ -33,7 +33,7 @@ exports.run = (client, message, args) => {
         if (client.commands.has(command)) {
             command = client.commands.get(command);
             embcommand.setTitle(`${command.help.name}`);
-            embcommand.setDescription(`${command.help.LDescription}`||`${command.help.description}`);
+            embcommand.setDescription(`${command.help.LDescription}`);
             embcommand.addField("usage", `${command.help.usage}`);
             embcommand.addField("aliases", `${command.conf.aliases.join(", ")}` || 'no aliases');
             return [message.channel.send({embed: embcommand}), embcommand = new Discord.MessageEmbed()
@@ -57,7 +57,8 @@ exports.help = {
     name: "help",
     category: "info",
     usage: "da!help",
-    description: "Displays all the available commands."
+    LDescription: "Displays all the available commands.",
+    SDescription: "Displays all the available commands."
 };
 
 
