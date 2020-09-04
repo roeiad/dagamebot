@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 
 
 exports.run = async (client, message) => {
-    // let args = [];
+    let args = [];
     // let channel = message.guild.channels.cache.find((x) => (x.name === "suggestion" || x.name === "suggestions"));
     const collector = message.channel.createMessageCollector({time: 15000});
 
