@@ -2,9 +2,7 @@ const Discord = require("discord.js");
 
 
 exports.run = async (client, message) => {
-    let description,name;
-    const embed = new Discord.MessageEmbed();
-
+    let description, name;
     let channel = message.guild.channels.cache.find((x) => (x.name === "suggestion" || x.name === "suggestions"));
 
     await message.channel.send({embed: {description: "welcome to the Suggestion center for dabot\n if in any part you having trouble, type 'help'\n 'cancel` to cancel"}});
@@ -15,31 +13,30 @@ exports.run = async (client, message) => {
     } else if (message.content === "cancel") {
         return message.channel.send("canceling");
     } else {
-        name = message.content;
+        name =  message.content;
     }
-    await message.channel.send("enter a description");
-    if (message.content === "help") {
-        await message.channel.send("da!{command name}");
-    }
-    if (message.content === "cancel") {
-        return message.channel.send("cancelling");
-    }
-    if (message.content === "help") {
-        await message.channel.send("describe what this command will do");
-    } else {
-        description=message.content;
-        description.then(d => {
-            embed.setAuthor("by: " + message.author.tag, message.author.avatarURL());
-            embed.setTitle("SUGGESTION:" + name);
-            embed.setDescription(d);
-            embed.setTimestamp();
-        });
-    }
+        await message.channel.send("enter a description");
+        if (message.content === "help") {
+            await message.channel.send("da!{command name}");
+        }
+        if (message.content === "cancel") {
+            return message.channel.send("cancelling");
+        }
+        if (message.content === "help") {
+            await message.channel.send("describe what this command will do");
+        } else {
+            description =  message.content;
+        }
+            const embed = new Discord.MessageEmbed()
+                .setAuthor("by: " + message.author.tag, message.author.avatarURL())
+                .setTitle("SUGGESTION:" + name)
+                .setDescription(description)
+                .setTimestamp();
 
-    await channel.send(embed).then(m => {
-        m.react("✅");
-        m.react("❌");
-    });
+            await channel.send(embed).then(m => {
+                m.react("✅");
+                m.react("❌");
+            });
 
 
 };
