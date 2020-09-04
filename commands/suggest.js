@@ -2,8 +2,8 @@ const Discord = require("discord.js");
 
 
 exports.run = async (client, message) => {
-    let args = [];
-    let channel = message.guild.channels.cache.find((x) => (x.name === "suggestion" || x.name === "suggestions"));
+    // let args = [];
+    // let channel = message.guild.channels.cache.find((x) => (x.name === "suggestion" || x.name === "suggestions"));
     const collector = message.channel.createMessageCollector({time: 15000});
 
     await message.channel.send({embed: {description: "welcome to the Suggestion center for dabot\n if in any part you having trouble, type 'help'\n 'cancel` to cancel"}});
@@ -34,17 +34,17 @@ exports.run = async (client, message) => {
         }
     });
 
-        const embed = new Discord.MessageEmbed()
-            .setAuthor("by: " + message.author.tag, message.author.avatarURL())
-            .setTitle("SUGGESTION:" + args[0])
-            .setDescription(args[1])
-            .setTimestamp();
-
-        await channel.send(embed).then(m => {
-            m.react("✅");
-            m.react("❌");
-        });
-        args = [];
+        // const embed = new Discord.MessageEmbed()
+        //     .setAuthor("by: " + message.author.tag, message.author.avatarURL())
+        //     .setTitle("SUGGESTION:" + args[0])
+        //     .setDescription(args[1])
+        //     .setTimestamp();
+        //
+        // await channel.send(embed).then(m => {
+        //     m.react("✅");
+        //     m.react("❌");
+        // });
+        // args = [];
 };
 
 exports.conf = {
