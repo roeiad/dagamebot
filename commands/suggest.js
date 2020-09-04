@@ -33,7 +33,7 @@ exports.run = async (client, message) => {
             args.push(message.content);
         }
     });
-    while (args[2] != null) {
+
         const embed = new Discord.MessageEmbed()
             .setAuthor("by: " + message.author.tag, message.author.avatarURL())
             .setTitle("SUGGESTION:" + args[0])
@@ -45,7 +45,6 @@ exports.run = async (client, message) => {
             m.react("❌");
         });
         args = [];
-    }
 };
 
 exports.conf = {
