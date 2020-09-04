@@ -46,6 +46,7 @@ exports.conf = {
 exports.help = {
     name: "suggest",
     usage: "da!suggest",
-    description: "Send your Suggestion",
+    SDescription: "Send your Suggestion",
+    LDescription: "Send your Suggestion",
     category: "other"
 };
