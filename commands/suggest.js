@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 exports.run = async (client, message) => {
     let args = [];
-    let server= `${guild.name}`;
+    let server= `${message.guild.name}`;
     let channel = message.guild.channels.cache.find((x) => (x.name === "suggestion" || x.name === "suggestions"));
     const filter = m => {
         return m.author.id === message.author.id;
