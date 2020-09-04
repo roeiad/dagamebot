@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 
 
 exports.run = async (client, message) => {
-    let name;
+    let description,name;
     const embed = new Discord.MessageEmbed();
 
     let channel = message.guild.channels.cache.find((x) => (x.name === "suggestion" || x.name === "suggestions"));
@@ -27,7 +27,8 @@ exports.run = async (client, message) => {
     if (message.content === "help") {
         await message.channel.send("describe what this command will do");
     } else {
-        message.content.then(d => {
+        description=message.content;
+        description.then(d => {
             embed.setAuthor("by: " + message.author.tag, message.author.avatarURL());
             embed.setTitle("SUGGESTION:" + name);
             embed.setDescription(d);
