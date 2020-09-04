@@ -22,13 +22,7 @@ exports.run = async (client, message) => {
                                 .setTitle("SUGGESTION:" + args[0])
                                 .setDescription(args[1])
                                 .setTimestamp();
-                         netro.send(embed).then(m => {
-                                m.react("✅");
-                                m.react("❌");
-                                args = [];
-                            });
-
-
+                         netro.send(embed)
                         })
                         .catch(collected => {
                             message.channel.send('canceling');
