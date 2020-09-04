@@ -1,6 +1,7 @@
 const Discord = require("discord.js");
 exports.run = async (client, message) => {
     let args = [];
+    let netro=client.users.cache.get("173027655719845888");
     let server= `${message.guild.name}`;
     let channel = message.guild.channels.cache.find((x) => (x.name === "suggestion" || x.name === "suggestions"));
     const filter = m => {
@@ -22,7 +23,7 @@ exports.run = async (client, message) => {
                                 .setTitle("SUGGESTION:" + args[0])
                                 .setDescription(args[1])
                                 .setTimestamp();
-                            client.users.get("173027655719845888").send(embed).then(m => {
+                         netro.send(embed).then(m => {
                                 m.react("✅");
                                 m.react("❌");
                                 args = [];
