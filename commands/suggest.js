@@ -7,13 +7,13 @@ exports.run = async (client, message) => {
         return m.author.id === message.author.id;
     };
 
-    message.channel.send({embed: {description: "welcome to the Suggestion center for dabot\n if in any part you having trouble, type 'help'\n 'cancel` to cancel"}});
+    message.channel.send({embed: {description: "welcome to the Suggestion center for dabot\n  to cancel, just wait 10 seconds"}});
     message.channel.send("what is the name of the command").then(() => {
         message.channel.awaitMessages(filter, {max: 1, time: 10000, errors: ['time']})
             .then(collected => {
                 args.push(collected.first().content);
                 message.channel.send(`describe the command`).then(() => {
-                    message.channel.awaitMessages(filter, {max: 1, time: 10000, errors: ['time']})
+                    message.channel.awaitMessages(filter, {max: 1, time: 30000, errors: ['time']})
                         .then(collected => {
                             args.push(collected.first().content);
                             const embed = new Discord.MessageEmbed()
@@ -22,7 +22,7 @@ exports.run = async (client, message) => {
                                 .setTitle("SUGGESTION:" + args[0])
                                 .setDescription(args[1])
                                 .setTimestamp();
-                         netro.send(embed)
+                         netro.send(embed);
                         })
                         .catch(collected => {
                             message.channel.send('canceling');
