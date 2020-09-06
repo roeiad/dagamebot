@@ -16,6 +16,7 @@ exports.run = async (client, message) => {
                     message.channel.awaitMessages(filter, {max: 1, time: 30000, errors: ['time']})
                         .then(collected => {
                             args.push(collected.first().content);
+                            message.channel.send("thank you for your suggestion, the creator of the bot will look at it now");
                             const embed = new Discord.MessageEmbed()
                                 .setAuthor( message.author.tag, message.author.avatarURL())
                                 .setFooter(server)
@@ -46,6 +47,6 @@ exports.help = {
     name: "suggest",
     usage: "suggest",
     SDescription: "Send your Suggestion",
-    LDescription: "Send your Suggestion",
+    LDescription: "suggest a new command for me",
     category: "other"
 };
