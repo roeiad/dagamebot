@@ -1,8 +1,8 @@
-const liqufy = require("../functions/liquid.js");
+const randomMedia = require("../functions/randomMedia.js");
 const text = require("../assets/text.json");
 exports.run = async (client, message) => {
 
-    const face = liqufy.getFace();
+    const face = randomMedia.getFace();
     await message.channel.send(face);
 };
 

@@ -1,7 +1,7 @@
-const faces = require("../assets/pics.json").liquefied;
+const media = require("../assets/pics.json");
 const randomized = require("randomatic");
 
-class liquid {
+class randomMedia {
     static randomIntFromInterval(max) {
         let result = Math.floor(Math.random() * (max - 0 + 1));
         if (result < 0) {
@@ -15,16 +15,21 @@ class liquid {
     static getFace() {
         let choose = randomized("?", 1, {chars: 'pg'});
         if (choose === 'g') {
-            let amount = faces.gifs.length;
+            let amount = media.liquefied.gifs.length;
             let random = this.randomIntFromInterval(amount);
-            return faces.gifs[random];
+            return media.liquefied.gifs[random];
         } else if (choose === 'p') {
-            let amount = faces.pics.length;
+            let amount = media.liquefied.pics.length;
             let random = this.randomIntFromInterval(amount);
-            return faces.pics[random];
+            return media.liquefied.pics[random];
         }
+    }
+    static boi() {
+        let amount = media.boi.length;
+        let random = this.randomIntFromInterval(amount);
+        return media.boi[random];
     }
 
 }
 
-module.exports = liquid;
+module.exports = randomMedia;
