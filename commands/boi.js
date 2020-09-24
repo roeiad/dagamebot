@@ -1,4 +1,6 @@
 const randomMedia = require("../functions/randomMedia.js");
+const text= require("../assets/text.json");
+
 exports.run = async (client, message) => {
 
     const media = randomMedia.boi();
@@ -16,6 +18,6 @@ exports.help = {
     name: "boi",
     usage:"boi",
     category: "fun",
-    SDescription: "its your boi",
-    LDescription: "get a silly picture/gif of will"
+    SDescription: text.help.short.boi,
+    LDescription: text.help.long.boi
 };
