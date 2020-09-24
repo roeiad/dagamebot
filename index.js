@@ -10,8 +10,6 @@ require("./modules/functions.js")(client);
 client.commands = new Enmap();
 client.aliases = new Enmap();
 client.settings = new Enmap({name: "settings"});
-
-
 const init = async () => {
     client.on("ready", () => {
         console.log(client.user.username+` has started, with ${client.users.cache.size} users, in ${client.channels.cache.size} channels of ${client.guilds.cache.size} guilds:`);
