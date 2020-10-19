@@ -4,7 +4,7 @@ exports.run = async (client, message) => {
     let name="da!music";
     const arg = message.content.slice(name.length).trim().split(' ');
 
-    if (arg === "iris") {
+    if (arg[0] === "iris") {
         await message.channel.send(links.iris);
     }
     else {
