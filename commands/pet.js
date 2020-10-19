@@ -24,6 +24,6 @@ exports.help = {
     name: "pet",
     usage:"pet",
     category: "fun",
-    SDescription: "pet the little boi",
-    LDescription: "pet the little boi"
+    SDescription: text.help.pet,
+    LDescription: text.help.pet
 };

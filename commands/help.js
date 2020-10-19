@@ -23,7 +23,7 @@ exports.run = (client, message, args) => {
             embedes.setDescription(output);
             embedes.addField(`${message.settings.prefix}${c.help.name}`, `${c.help.SDescription}\n`, false);
         });
-        message.channel.send({embed: embedes});
+        message.channel.send({ embed: embedes });
         embedes = new Discord.MessageEmbed()
             .setColor(0x00AE86)
             .setFooter(text.help.created);
@@ -36,11 +36,11 @@ exports.run = (client, message, args) => {
             embcommand.setDescription(`${command.help.LDescription}`);
             embcommand.addField("usage", `${message.settings.prefix}${command.help.usage}`);
             embcommand.addField("aliases", `${command.conf.aliases.join(", ")}` || 'no aliases');
-            return [message.channel.send({embed: embcommand}), embcommand = new Discord.MessageEmbed()
+            return [message.channel.send({ embed: embcommand }), embcommand = new Discord.MessageEmbed()
                 .setColor(0x00AE86).setFooter(text.help.created)];
 
         }
-        message.channel.send(args[0]+"command dose not exist");
+        message.channel.send(args[0] + "command dose not exist");
 
     }
 };
@@ -49,7 +49,7 @@ exports.run = (client, message, args) => {
 exports.conf = {
     enabled: true,
     guildOnly: false,
-    aliases: ["h",],
+    aliases: ["h", "hlp"],
     permLevel: "User"
 };
 
