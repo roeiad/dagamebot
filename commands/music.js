@@ -1,10 +1,10 @@
 const text = require("../assets/text.json");
 const links = require("../assets/links.json");
 exports.run = async (client, message) => {
-    let name="da!music";
-    const arg = message.content.slice(name.length).trim().split(' ');
+    // let name="da!music";
+    const arg = message.content.split(' ');
 
-    if (arg[0] === "iris") {
+    if (arg[1] === "iris") {
         await message.channel.send(links.iris);
     }
     else {
