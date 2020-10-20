@@ -3,7 +3,7 @@ const links = require("../assets/links.json");
 
 exports.run = async (client, message) => {
     const arg = message.content.split(' ').shift().toLowerCase();
-    switch (arg) {
+    switch (arg[0]) {
         default:
             await message.channel.send(links.playlist);
             await message.channel.send(links.iris);
