@@ -1,5 +1,6 @@
 const text= require("../assets/text.json");
-exports.run = async (client, message) => {
+
+exports.run = async ( message) => {
   await message.channel.send(text.info);
 };
 

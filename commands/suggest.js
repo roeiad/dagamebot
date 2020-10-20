@@ -1,4 +1,5 @@
 const Discord = require("discord.js");
+
 exports.run = async (client, message) => {
     let args = [];
     let netro=client.users.cache.get("173027655719845888");
@@ -24,18 +25,12 @@ exports.run = async (client, message) => {
                                 .setDescription(args[1])
                                 .setTimestamp();
                          netro.send(embed);
-                        })
-                        .catch(collected => {
-                            message.channel.send('canceling');
                         });
                 });
-
-            })
-            .catch(collected => {
-                message.channel.send('canceling');
-            });
+            });    
     });
 };
+
 exports.conf = {
     enabled: true,
     guildOnly: false,

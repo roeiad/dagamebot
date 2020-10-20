@@ -2,7 +2,6 @@ const text = require("../assets/text.json");
 const pics = require("../assets/pics.json");
 const Discord = require("discord.js");
 
-
 exports.run = async (client, message) => {
     const atuser = message.mentions.users.first();
     if (atuser === undefined) {
@@ -18,10 +17,10 @@ exports.run = async (client, message) => {
             .setTitle(atuser.username + " ," + message.author.username + " wants you to shut up!")
             .setColor(0x00AE86)
             .setImage(pics.shutup);
-
         return await message.channel.send({embed});
     }
 };
+
 exports.conf = {
     enabled: true,
     guildOnly: false,

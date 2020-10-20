@@ -1,7 +1,7 @@
 const text = require("../assets/text.json");
 const links = require("../assets/links.json");
-exports.run = async (client, message) => {
-    // let name="da!music";
+
+exports.run = async (message) => {
     const arg = message.content.toLowerCase().split(' ');
     switch (arg[1]) {
         default:
@@ -15,13 +15,6 @@ exports.run = async (client, message) => {
             await message.channel.send(links.playlist);
             break;  
     }
-
-    // if (arg[1] === "iris") {
-    //     await message.channel.send(links.iris);
-    // }
-    // else {
-    //     await message.channel.send(links.playlist);
-    // }
 };
 
 exports.conf = {

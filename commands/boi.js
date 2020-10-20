@@ -1,8 +1,7 @@
 const randomMedia = require("../functions/randomMedia.js");
 const text= require("../assets/text.json");
 
-exports.run = async (client, message) => {
-
+exports.run = async (message) => {
     const media = randomMedia.boi();
     await message.channel.send(media);
 };
