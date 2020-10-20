@@ -2,8 +2,8 @@ const text = require("../assets/text.json");
 const links = require("../assets/links.json");
 
 exports.run = async (client, message) => {
-    const arg = message.content.split(' ');
-    switch (arg[1]) {
+    const arg = message.content.split(' ').shift().toLowerCase();
+    switch (arg) {
         default:
             await message.channel.send(links.playlist);
             await message.channel.send(links.iris);
@@ -15,13 +15,6 @@ exports.run = async (client, message) => {
             await message.channel.send(links.playlist);
             break;  
     }
-
-    // if (arg[1] === "iris") {
-    //     await message.channel.send(links.iris);
-    // }
-    // else {
-    //     await message.channel.send(links.playlist);
-    // }
 };
 
 exports.conf = {
