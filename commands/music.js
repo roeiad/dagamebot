@@ -2,7 +2,7 @@ const text = require("../assets/text.json");
 const links = require("../assets/links.json");
 
 exports.run = async (message) => {
-    const arg = message.content.split(' ').shift().toLowerCase();
+    const arg = message.content.split(' ');
     switch (arg[1]) {
         default:
             await message.channel.send(links.playlist);
