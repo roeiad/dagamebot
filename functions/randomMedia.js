@@ -12,13 +12,13 @@ class randomMedia {
         return result;
     }
 
-    static getFace(arg) {
+    static getFace() {
         let choose = randomized("?", 1, {chars: 'pg'});
-        if (choose === arg== 'g') {
+        if (choose === 'g') {
             let amount = media.liquefied.gifs.length;
             let random = this.randomIntFromInterval(amount);
             return media.liquefied.gifs[random];
-        } else if (choose === arg== 'p') {
+        } else if (choose ===  'p') {
             let amount = media.liquefied.pics.length;
             let random = this.randomIntFromInterval(amount);
             return media.liquefied.pics[random];

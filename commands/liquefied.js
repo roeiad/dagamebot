@@ -2,9 +2,7 @@ const randomMedia = require("../functions/randomMedia.js");
 const text = require("../assets/text.json");
 
 exports.run = async (message) => {
-    const arg = message.content.split(' ');
-    const letter=arg[1];
-    const face = randomMedia.getFace(letter);
+    const face = randomMedia.getFace();
     await message.channel.send(face);
 };
 
