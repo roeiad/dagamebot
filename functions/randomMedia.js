@@ -7,13 +7,13 @@ class randomMedia {
         if (result < 0) {
             result = 0;
         } else if (result > max) {
-            result = max;
+            result = max-1;
         }
         return result;
     }
 
     static getFace() {
-        let choose = randomized("?", 1, {chars: 'pg'});
+        let choose = randomized("?", 1, {chars:'pg'});
         if (choose === 'g') {
             let amount = media.liquefied.gifs.length;
             let random = this.randomIntFromInterval(amount);
