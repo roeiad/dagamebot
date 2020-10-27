@@ -1,6 +1,5 @@
 const media = require("../assets/pics.json");
 const randomized = require("randomatic");
-// let choose = randomized("?", 1, {chars:'pg'});
 
 class randomMedia {
     static randomIntFromInterval(max) {

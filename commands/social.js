@@ -3,7 +3,7 @@ const links = require("../assets/links.json");
 const pics = require("../assets/pics.json");
 const Discord = require("discord.js");
 
-exports.run = async (message) => {
+exports.run = async (client,message) => {
     const twitter = new Discord.MessageEmbed()
         .setTitle("twitter")
         .setURL(links.twitter)
