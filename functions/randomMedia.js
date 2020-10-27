@@ -1,5 +1,6 @@
 const media = require("../assets/pics.json");
 const randomized = require("randomatic");
+let choose = randomized("?", 1, {chars:'pg'});
 
 class randomMedia {
     static randomIntFromInterval(max) {
@@ -12,13 +13,12 @@ class randomMedia {
         return result;
     }
 
-    static getFace() {
-        let choose = randomized("?", 1, {chars:'pg'});
-        if (choose === 'g') {
+    static getFace(arg=choose) {
+        if (arg === 'g') {
             let amount = media.liquefied.gifs.length;
             let random = this.randomIntFromInterval(amount);
             return media.liquefied.gifs[random];
-        } else if (choose ===  'p') {
+        } else if (arg ===  'p') {
             let amount = media.liquefied.pics.length;
             let random = this.randomIntFromInterval(amount);
             return media.liquefied.pics[random];
