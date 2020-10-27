@@ -5,9 +5,7 @@ const randomized = require("randomatic");
 class randomMedia {
     static randomIntFromInterval(max) {
         let result = Math.floor(Math.random() *max);
-        if (result < 0) {
-            result = 0;
-        } else if (result > max) {
+         if (result > max) {
             result = max;
         }
         return result;
@@ -18,7 +16,7 @@ class randomMedia {
             let amount = media.liquefied.gifs.length;
             let random = this.randomIntFromInterval(amount);
             return media.liquefied.gifs[random];
-        } else if (arg ===  'p') {
+        }  if (arg ===  'p') {
             let amount = media.liquefied.pics.length;
             let random = this.randomIntFromInterval(amount);
             return media.liquefied.pics[random];
