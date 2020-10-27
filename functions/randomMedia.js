@@ -4,7 +4,7 @@ let choose = randomized("?", 1, {chars:'pg'});
 
 class randomMedia {
     static randomIntFromInterval(max) {
-        let result = Math.floor(Math.random() * (max - -1)+1);
+        let result = Math.floor(Math.random() *max);
         if (result < 0) {
             result = 0;
         } else if (result > max) {
