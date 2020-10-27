@@ -3,16 +3,18 @@ const links = require("../assets/links.json");
 
 exports.run = async (client, message) => {
     const arg = message.content.split(' ');
+    let iris =  await message.channel.send(links.iris);
+    let dagames=await message.channel.send(links.playlist);
     switch (arg[1]) {
         default:
-            await message.channel.send(links.playlist);
-            await message.channel.send(links.iris);
+            iris;
+            dagames;
             break;
         case "iris":
-            await message.channel.send(links.iris);
+            iris;
             break;
         case "dagames":
-            await message.channel.send(links.playlist);
+            dagames; 
             break;  
     }
 };
