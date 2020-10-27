@@ -4,11 +4,11 @@ let choose = randomized("?", 1, {chars:'pg'});
 
 class randomMedia {
     static randomIntFromInterval(max) {
-        let result = Math.floor(Math.random() * (max - 0 + 1));
+        let result = Math.floor(Math.random() * (max - -1)+1);
         if (result < 0) {
             result = 0;
         } else if (result > max) {
-            result = max-1;
+            result = max;
         }
         return result;
     }
