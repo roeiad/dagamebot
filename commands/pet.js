@@ -8,7 +8,7 @@ exports.run = async (message) => {
     const pet=message.mentions.users.first();
     const canvas = Canvas.createCanvas(580, 580);
 	const ctx = canvas.getContext('2d');
-
+if (pet!=undefined) {
 	const background = await Canvas.loadImage(pics.plush);
 	ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
 
@@ -22,7 +22,8 @@ exports.run = async (message) => {
 
 	const attachment = new Discord.MessageAttachment(canvas.toBuffer(), 'welcome-image.png');
 
-	await message.channel.send(pet.username+" "+message.author.username, attachment);
+  return  await message.channel.send(pet.username+" "+message.author.username, attachment);
+}
         // const embed = new Discord.MessageEmbed()
         //     .setTitle(text.pet)
         //     .setColor(0x00AE86)
