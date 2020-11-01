@@ -2,7 +2,6 @@ const text= require("../assets/text.json");
 const pics = require("../assets/pics.json");
 const Discord = require("discord.js");
 
-
 exports.run = async (message) => {
         const embed = new Discord.MessageEmbed()
             .setTitle(text.pet)
