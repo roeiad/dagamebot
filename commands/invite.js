@@ -1,7 +1,7 @@
 const text = require("../assets/text.json");
 const links = require("../assets/links.json");
 
-exports.run = async (message) => {
+exports.run = async (client,message) => {
     message.author.send(links.invite);
 };
 
