@@ -1,7 +1,7 @@
 // const fs=require("fs");
 exports.run = async (message) => {
     // const DontTalk = fs.readFile('../../aassets/son.png');
-    await message.channel.send( { files: ["../../assets/son.png"] });
+    await message.channel.send( { files: ["../assets/son.png"] });
 };
 
 exports.conf = {
