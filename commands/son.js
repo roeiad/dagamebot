@@ -1,7 +1,7 @@
-// const fs=require("fs");
-// const test = require("../assets/son.png");
+const pics = require("../assets/pics.json");
+
 exports.run = async (message) => {
-    await message.channel.send( { files: ["../assets/son.png"] });
+    await message.channel.send(pics.son);
 };
 
 exports.conf = {
