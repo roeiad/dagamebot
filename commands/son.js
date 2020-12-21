@@ -1,6 +1,6 @@
 // const fs=require("fs");
+// const test = require("../assets/son.png");
 exports.run = async (message) => {
-    // const DontTalk = fs.readFile('../../aassets/son.png');
     await message.channel.send( { files: ["../assets/son.png"] });
 };
 
