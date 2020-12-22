@@ -1,6 +1,6 @@
 const pics = require("../assets/pics.json");
 
-exports.run = async (message) => {
+exports.run = async (client,message) => {
     await message.channel.send(pics.son);
 };
 

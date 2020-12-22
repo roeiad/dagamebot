@@ -1,6 +1,6 @@
 const text = require("../assets/text.json");
 
-exports.run = async (message) => {
+exports.run = async (client,message) => {
     await message.channel.send("hey buddies is " + message.author.username + " of DAGames");
 };
 

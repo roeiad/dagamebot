@@ -2,7 +2,7 @@ const text= require("../assets/text.json");
 const pics = require("../assets/pics.json");
 const Discord = require("discord.js");
 
-exports.run = async (message) => {
+exports.run = async (client,message) => {
         const embed = new Discord.MessageEmbed()
             .setTitle(text.pet)
             .setColor(0x00AE86)
