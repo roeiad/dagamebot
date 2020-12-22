@@ -12,8 +12,8 @@ exports.conf = {
 };
 
 exports.help = {
-    name: "boi",
-    usage:"boi",
+    name: "son",
+    usage:"son",
     category: "fun",
     SDescription: "dont talk",
     LDescription: "dont talk"
