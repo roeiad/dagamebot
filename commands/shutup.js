@@ -23,9 +23,7 @@ exports.run = async (client, message) => {
 
 exports.conf = {
     enabled: true,
-    guildOnly: false,
     aliases: ["shut",],
-    permLevel: "User"
 };
 
 exports.help = {

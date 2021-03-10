@@ -1,4 +1,10 @@
 {
+  "merch":
+  {
+    "streamlabs":"https://streamlabs.com/dagamesofficial/merch",
+    "teespring": "https://teespring.com/stores/will-ryans-store",
+    "screenwave": "https://store.screenwavemedia.com/collections/dagames"
+  },
   "invite": "https://discord.com/api/oauth2/authorize?client_id=730009870585167933&permissions=0&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauth&scope=bot",
   "twitter": "https://twitter.com/DAGamesOfficial",
   "youtube": "https://www.youtube.com/user/DiamondArmadaOnline",
