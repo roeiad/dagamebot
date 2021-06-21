@@ -36,8 +36,9 @@
     $$$$@$$$$$$$$$$$@$$$$$$$$$$$$M$$$@$$$@@,     $#$$$$$$$$$&$$$$$$$$$$@$$$$$$$$$$$@
     $$$&$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$&$$$$g, ,$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
     $$$$$$$$&$$$$$$$$$$$$$$$$@$$$$$$$$$$$$$&$$@@$@$$$$$$$$$$@$$$$$$$$$$$$$$$$$$$$$$$
-    
-
+   
+ 
+A <span style="color:purple">*[DAGames]*(https://www.youtube.com/channel/UCK7OXr0m5mnM1z9p7n_Bwfw)</span>. insiered [discord](https://discord.com/) bot
 
 to invite the bot to your server click [here](https://discord.com/oauth2/authorize?client_id=730009870585167933&scope=bot&permissions=0)
 
