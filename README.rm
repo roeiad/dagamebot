@@ -1,3 +1,4 @@
+# dagamebot
 
     $$@@$$$$$$$$@$$$$$$$$$@$$$$@$$$$$$$$$$$$$$@$$$$$$$$$$$$$$$@$$$$$$$$$$$$$$$$$$$$$
     @$$$$$$$$$$$$$@$$$@$$$$$$$$$$$@@@$$$$$$$$$$$$$@$$$$@$$$$$$$@$$@@$$$$$$$$$$$$$$$$
@@ -36,25 +37,24 @@
     $$$&$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$&$$$$g, ,$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
     $$$$$$$$&$$$$$$$$$$$$$$$$@$$$$$$$$$$$$$&$$@@$@$$$$$$$$$$@$$$$$$$$$$$$$$$$$$$$$$$
     
-# dagamebot
 
+
+to invite the bot to your server click [here](https://discord.com/oauth2/authorize?client_id=730009870585167933&scope=bot&permissions=0)
 
 | Command       |argument|  Description                                                                                                              
-| ------------- | ------|------------------------------------------------------------------------------------------------------------------- 
-| da!help       | | shows a list of all the commands      
-| da!invite      | | send a link to invite the bot to your servers                                                                                           
-| da!info        | | display info about dagames                                                                                          
+| --------------|--------|------------------------------------------------------------------------------------------------------------------- 
+| da!help       | none | shows a list of all the commands      
+| da!invite      | none | send a link to invite the bot to your servers                                                                                           
+| da!info        | none | display info about dagames                                                                                          
 | da!music       |iris/dagames | return music playlist                                                                                           
 | da!shutup      | @username* | tell a user to shut up 
-|da!merch| |return links to merch store
-|da!social | |return dagames's social 
-|da!liquefied | |return a random liquefied will
-|da!intro | |play the intro
-|da!outtro | | play the outrro
-|da!boy | |its our boy 
-|da!pat | | head pat
-|da!son | | DONT TALK TO ME SON!!!
-
-
+|da!merch |none |return links to merch store
+|da!social |none |return dagames's social 
+|da!liquefied | none |return a random liquefied will
+|da!intro | none |play the intro
+|da!outtro | none | play the outrro
+|da!boy | none |its our boy 
+|da!pat | none | head pat
+|da!son | none | DONT TALK TO ME SON!!!
 
 *requier argument
