@@ -16,8 +16,8 @@ exports.conf = {
 };
 
 exports.help = {
-    name: "pet",
-    usage:"pet",
+    name: "pat",
+    usage:"pat",
     category: "fun",
     SDescription: text.help.pet,
     LDescription: text.help.pet
