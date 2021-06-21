@@ -3,6 +3,15 @@
 
 to invite the bot to your server click [here](https://discord.com/oauth2/authorize?client_id=730009870585167933&scope=bot&permissions=0)
 
+
+| Command       | Description                                                                                                              
+| ------------- | ------------------------------------------------------------------------------------------------------------------------- 
+| da!help       | shows a list of all the commands      
+| puzzle!start       | start the bot                                                                                           
+| puzzle!stop       | stop the bot                                                                                           
+| puzzle!pun        | return a random pun                                                                                           
+| puzzle!dadjoke       | return a random dad joke      
+
 | Command       |   Description                                                                                                              
 | -------------- |------------------------------------------------------------------------------------------------------------------- 
 | da!help        | shows a list of all the commands      
