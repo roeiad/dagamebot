@@ -41,8 +41,8 @@
 
 to invite the bot to your server click [here](https://discord.com/oauth2/authorize?client_id=730009870585167933&scope=bot&permissions=0)
 
-| Command       |argument|  Description                                                                                                              
-| --------------|--------|------------------------------------------------------------------------------------------------------------------- 
+| Command       | argument|  Description                                                                                                              
+| -------------- | -------- |------------------------------------------------------------------------------------------------------------------- 
 | da!help       | none | shows a list of all the commands      
 | da!invite      | none | send a link to invite the bot to your servers                                                                                           
 | da!info        | none | display info about dagames                                                                                          
